@@ -21,6 +21,17 @@
         Me.gestor = New GestorInvestigadores()
     End Sub
 
+    Public Sub New(ByVal Nombre As String, ByVal Apellidos As Integer, ByVal Despacho As String, ByVal Edificio As String, ByVal Departamento As String, ByVal Telefono As Integer, ByVal Email As String)
+        Me.nombre = Nombre
+        Me.apellidos = Apellidos
+        Me.despacho = Despacho
+        Me.edificio = Edificio
+        Me.departamento = Departamento
+        Me.telefono = Telefono
+        Me.email = Email
+        Me.gestor = New GestorInvestigadores()
+    End Sub
+
     Public Sub New(ByVal nombre As String)
         Me.nombre = nombre
         Me.gestor = New GestorInvestigadores()

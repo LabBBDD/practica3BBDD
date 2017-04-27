@@ -17,6 +17,15 @@
         Me.gestor = New GestorConferencia()
     End Sub
 
+    Public Sub New(ByVal Siglas As String, ByVal Nombre As String, ByVal Lugar As String, ByVal Edificio As String, ByVal Fecha_Inicio As String, ByVal Fecha_Fin As String)
+        Me.siglas = Siglas
+        Me.nombre = Nombre
+        Me.lugar = Lugar
+        Me.fecha_inicio = Fecha_Inicio
+        Me.fecha_fin = Fecha_Fin
+        Me.gestor = New GestorConferencia()
+    End Sub
+
     Public Sub New(ByVal nombre As String)
         Me.nombre = nombre
         Me.gestor = New GestorConferencia()

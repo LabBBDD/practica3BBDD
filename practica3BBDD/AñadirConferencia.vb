@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        If Not IsNothing(ComboBoxGENERO.SelectedItem) Or Not IsNothing(ListBox1.SelectedItem) Then
+        If Not IsNothing(ListBox1.SelectedItem) Then
             Try
                 conferencia.borrar()
             Catch ex As System.Data.OleDb.OleDbException
@@ -44,7 +44,7 @@
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-        conferencia = New Conferencia(ListBox.SelectedItem)
+        conferencia = New Conferencia(ListBox1.SelectedItem)
         conferencia.leer()
         txtIdConferencia.Text = conferencia.id_Conferencia
         txtSiglas.Text = conferencia.nombre_siglas
@@ -57,14 +57,14 @@
         ListBox1.Items.Clear()
         conferencia = New Conferencia
         conferencia.leerTodo()
-        For Each pAux2 As Generos In genero.gestor.lista
-            genero = New Generos
-            genero.leer(pelicula)
-            If Not genero.gestor.lista Is Nothing Then
-                For Each pAux3 As Generos In genero.gestor.lista
-                    If pAux2.idGenero = pAux3.idGenero Then
+        For Each pAux2 As Conferencia In conferencia._gestor.lista
+            conferencia = New Conferencia
+            conferencia.leer()
+            If Not conferencia._gestor.lista Is Nothing Then
+                For Each pAux3 As Conferencia In conferencia._gestor.lista
+                    If pAux2.id_Conferencia = pAux3.id_Conferencia Then
                         'generos en los que si estamos
-                        ListBox1.Items.Add(pAux2.descGenero)
+                        ListBox1.Items.Add(pAux2.nombre_)
                     End If
                 Next
             End If

@@ -37,14 +37,14 @@
     End Sub
 
     Private Sub AñadirInvestigadores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ListBox.Items.Clear()
-        Menu.ListBoxInvestigadores.Items.Clear()
+        ListBox1.Items.Clear()
+        'Menu.ListBoxInvestigadores.Items.Clear()
         investigador = New Investigadores
         investigador.leerTodo()
         Dim pAux As Investigadores
-        For Each pAux In investigador.gestor.lista
-            ListBox.Items.Add(pAux.nombre)
-            GestionarDatos.ListBoxActores.Items.Add(pAux.nombre)
+        For Each pAux In investigador._gestor.lista
+            ListBox1.Items.Add(pAux.Nombre_Invest)
+            'Menu.ListBoxInvestigadores.Items.Add(pAux.Nombre_Invest)
         Next
     End Sub
 
