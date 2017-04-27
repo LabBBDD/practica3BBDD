@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="practica3BBDD.AgenteBD" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAASAAAQAAAAAAEAAAAABAAAAEIAA=</HashCode>
+      <FileName>AgenteBD.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.AñadirArticulos" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABAAAgEiAAAAAAAECgADgCAAAQUAAABAAAAAAAAAA=</HashCode>
+      <FileName>AñadirArticulos.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.AñadirAutores" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgECAAAAAAAECAADgCAAAQAAAABAAAAAAAAAA=</HashCode>
+      <FileName>AñadirAutores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.Form2" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAECAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AñadirConferencia.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.AñadirInvestigadores" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABgEAgEKAAAAAAAECgADgCAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AñadirInvestigadores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.Articulos" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAIAAAMAAgAAABAAgAAQAAIAAFAQUAAA=</HashCode>
+      <FileName>Articulos.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.Asiste" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAIAAAAAAAAABAAAAAAAAAAAAAAQQAAA=</HashCode>
+      <FileName>Asiste.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.Autores" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAAAAAAAIAAAAAAgAABAAAAAAAAAEAAAAABACA=</HashCode>
+      <FileName>Autores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.Conferencia" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAICAAAAGiABAAAAgAAAIAiAABIIIAAA=</HashCode>
+      <FileName>Conferencia.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.Form1" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Form1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.GestorArticulos" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAABQAQBAAAAIAQAAAAAAAAAAQABAAAAFAAA=</HashCode>
+      <FileName>GestorArticulos.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.GestorAutores" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAABQAQBAAAAIAQAAAAAAAAAAQABAAAAMAAA=</HashCode>
+      <FileName>GestorAutores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.GestorConferencia" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAJQAQBAAAAAAQAAAAAAAAAAQABAAAAUAAA=</HashCode>
+      <FileName>GestorConferencia.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.GestorInvestigadores" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAKAAAAJQAQBAAAAQAQAAAAAAAAAAQABAAAAEAAA=</HashCode>
+      <FileName>GestorInvestigadores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.Investigadores" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAABAQBAIChAAAAhAICAgAgAAJAAEAADABAEAI=</HashCode>
+      <FileName>Investigadores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.My.MyApplication" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="practica3BBDD.My.MySettings" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAABEAAAAABAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Module Name="practica3BBDD.My.MySettingsProperty" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="practica3BBDD.My.Resources.Resources" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

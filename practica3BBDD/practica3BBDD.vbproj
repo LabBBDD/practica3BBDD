@@ -72,11 +72,52 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgenteBD.vb" />
+    <Compile Include="Articulos.vb" />
+    <Compile Include="Asiste.vb" />
+    <Compile Include="Autores.vb" />
+    <Compile Include="AñadirArticulos.Designer.vb">
+      <DependentUpon>AñadirArticulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AñadirArticulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirAutores.Designer.vb">
+      <DependentUpon>AñadirAutores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AñadirAutores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirConferencia.Designer.vb">
+      <DependentUpon>AñadirConferencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AñadirConferencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirInvestigadores.Designer.vb">
+      <DependentUpon>AñadirInvestigadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AñadirInvestigadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conferencia.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestorArticulos.vb" />
+    <Compile Include="GestorAsiste.vb" />
+    <Compile Include="GestorAutores.vb" />
+    <Compile Include="GestorConferencia.vb" />
+    <Compile Include="GestorInvestigadores.vb" />
+    <Compile Include="Investigadores.vb" />
+    <Compile Include="Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,8 +137,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AñadirArticulos.resx">
+      <DependentUpon>AñadirArticulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AñadirAutores.resx">
+      <DependentUpon>AñadirAutores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AñadirConferencia.resx">
+      <DependentUpon>AñadirConferencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AñadirInvestigadores.resx">
+      <DependentUpon>AñadirInvestigadores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -107,6 +163,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
