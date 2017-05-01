@@ -22,7 +22,7 @@ Partial Class AñadirConferencia
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.LBConferencias = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,18 +40,18 @@ Partial Class AñadirConferencia
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'LBConferencias
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(25, 23)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(135, 212)
-        Me.ListBox1.TabIndex = 2
+        Me.LBConferencias.FormattingEnabled = True
+        Me.LBConferencias.Location = New System.Drawing.Point(25, 23)
+        Me.LBConferencias.Name = "LBConferencias"
+        Me.LBConferencias.Size = New System.Drawing.Size(135, 212)
+        Me.LBConferencias.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(194, 32)
+        Me.Label1.Location = New System.Drawing.Point(187, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 3
@@ -60,7 +60,7 @@ Partial Class AñadirConferencia
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(194, 72)
+        Me.Label2.Location = New System.Drawing.Point(187, 67)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(35, 13)
         Me.Label2.TabIndex = 4
@@ -69,7 +69,7 @@ Partial Class AñadirConferencia
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(194, 110)
+        Me.Label3.Location = New System.Drawing.Point(187, 106)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 5
@@ -78,7 +78,7 @@ Partial Class AñadirConferencia
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(199, 149)
+        Me.Label4.Location = New System.Drawing.Point(188, 145)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 13)
         Me.Label4.TabIndex = 6
@@ -88,41 +88,41 @@ Partial Class AñadirConferencia
         '
         Me.txtIdConferencia.Location = New System.Drawing.Point(272, 29)
         Me.txtIdConferencia.Name = "txtIdConferencia"
-        Me.txtIdConferencia.Size = New System.Drawing.Size(100, 20)
+        Me.txtIdConferencia.Size = New System.Drawing.Size(137, 20)
         Me.txtIdConferencia.TabIndex = 7
         '
         'txtSiglas
         '
         Me.txtSiglas.Location = New System.Drawing.Point(272, 65)
         Me.txtSiglas.Name = "txtSiglas"
-        Me.txtSiglas.Size = New System.Drawing.Size(100, 20)
+        Me.txtSiglas.Size = New System.Drawing.Size(137, 20)
         Me.txtSiglas.TabIndex = 8
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(272, 103)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(137, 20)
         Me.txtNombre.TabIndex = 9
         '
         'txtLugar
         '
         Me.txtLugar.Location = New System.Drawing.Point(272, 142)
         Me.txtLugar.Name = "txtLugar"
-        Me.txtLugar.Size = New System.Drawing.Size(100, 20)
+        Me.txtLugar.Size = New System.Drawing.Size(137, 20)
         Me.txtLugar.TabIndex = 10
         '
         'txtFechaFin
         '
         Me.txtFechaFin.Location = New System.Drawing.Point(272, 215)
         Me.txtFechaFin.Name = "txtFechaFin"
-        Me.txtFechaFin.Size = New System.Drawing.Size(100, 20)
+        Me.txtFechaFin.Size = New System.Drawing.Size(137, 20)
         Me.txtFechaFin.TabIndex = 12
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(199, 218)
+        Me.Label5.Location = New System.Drawing.Point(188, 218)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(54, 13)
         Me.Label5.TabIndex = 11
@@ -132,13 +132,13 @@ Partial Class AñadirConferencia
         '
         Me.txtFechaInicio.Location = New System.Drawing.Point(272, 178)
         Me.txtFechaInicio.Name = "txtFechaInicio"
-        Me.txtFechaInicio.Size = New System.Drawing.Size(100, 20)
+        Me.txtFechaInicio.Size = New System.Drawing.Size(137, 20)
         Me.txtFechaInicio.TabIndex = 14
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(194, 181)
+        Me.Label6.Location = New System.Drawing.Point(187, 181)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(65, 13)
         Me.Label6.TabIndex = 13
@@ -146,7 +146,7 @@ Partial Class AñadirConferencia
         '
         'btnAñadir
         '
-        Me.btnAñadir.Location = New System.Drawing.Point(490, 72)
+        Me.btnAñadir.Location = New System.Drawing.Point(440, 66)
         Me.btnAñadir.Name = "btnAñadir"
         Me.btnAñadir.Size = New System.Drawing.Size(75, 23)
         Me.btnAñadir.TabIndex = 15
@@ -155,7 +155,7 @@ Partial Class AñadirConferencia
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(490, 181)
+        Me.btnEliminar.Location = New System.Drawing.Point(440, 175)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
         Me.btnEliminar.TabIndex = 17
@@ -164,7 +164,7 @@ Partial Class AñadirConferencia
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(490, 123)
+        Me.btnModificar.Location = New System.Drawing.Point(440, 117)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
         Me.btnModificar.TabIndex = 18
@@ -175,7 +175,7 @@ Partial Class AñadirConferencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(603, 262)
+        Me.ClientSize = New System.Drawing.Size(559, 262)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAñadir)
@@ -191,7 +191,7 @@ Partial Class AñadirConferencia
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.LBConferencias)
         Me.Name = "AñadirConferencia"
         Me.Text = "AñadirConferencia"
         Me.ResumeLayout(False)
@@ -199,7 +199,7 @@ Partial Class AñadirConferencia
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents LBConferencias As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

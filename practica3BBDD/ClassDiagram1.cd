@@ -3,21 +3,21 @@
   <Class Name="practica3BBDD.AgenteBD" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAASAAAQAAAAAAEAAAAABAAAAEIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAASAAAQAAAAAAAAAAAABAAAAEIAA=</HashCode>
       <FileName>AgenteBD.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.AñadirArticulos" Collapsed="true">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQABAAAgEiAAAAAAAECgADgCAAAQUAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AQEAAABAEyAAAAAAAACAAAACAAAQUAAABBACIAAAAAA=</HashCode>
       <FileName>AñadirArticulos.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.AñadirAutores" Collapsed="true">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAgECAAAAAAAECAADgCAAAQAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AQASIAggACAAAAAAAACAAAACAAAQAAAARBACIAAIAAA=</HashCode>
       <FileName>AñadirAutores.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,7 +31,7 @@
   <Class Name="practica3BBDD.AñadirInvestigadores" Collapsed="true">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQABgEAgEKAAAAAAAECgADgCAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAQIAAAEGCgAAAAAACAAAACSCBAAIAgABBCIAABCIA=</HashCode>
       <FileName>AñadirInvestigadores.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,21 +45,21 @@
   <Class Name="practica3BBDD.Asiste" Collapsed="true">
     <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAIAAAAAAAAABAAAAAAAAAAAAAAQQAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAAQQAAA=</HashCode>
       <FileName>Asiste.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.Autores" Collapsed="true">
     <Position X="2.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAgAAAAAAAAIAAAAAAgAABAAAAAAAAAEAAAAABACA=</HashCode>
+      <HashCode>ABAAgAAAAAAAAIAAAAAAgAABAAAgAAIAAEAADAABECA=</HashCode>
       <FileName>Autores.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.Conferencia" Collapsed="true">
     <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAICAAAAGiABAAAAgAAAIAiAABIIIAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAACAAAAGCABAAAAAAAAIAiAAAIIIAAA=</HashCode>
       <FileName>Conferencia.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,35 +73,35 @@
   <Class Name="practica3BBDD.GestorArticulos" Collapsed="true">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAABQAQBAAAAIAQAAAAAAAAAAQABAAAAFAAA=</HashCode>
+      <HashCode>AAAAACAAAAJQAQBAAAAQAQAAAAAAAAAAQABAAAAFAAQ=</HashCode>
       <FileName>GestorArticulos.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.GestorAutores" Collapsed="true">
     <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAABQAQBAAAAIAQAAAAAAAAAAQABAAAAMAAA=</HashCode>
+      <HashCode>AAAAACAAAABQAQBAAAAAAQAgAAAAAAAAQABAAAAMAAA=</HashCode>
       <FileName>GestorAutores.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.GestorConferencia" Collapsed="true">
     <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAJQAQBAAAAAAQAAAAAAAAAAQABAAAAUAAA=</HashCode>
+      <HashCode>AAAAACAAAAJQAABAAAAAAQAAAAAAAAAAQABAAAAEAAA=</HashCode>
       <FileName>GestorConferencia.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.GestorInvestigadores" Collapsed="true">
     <Position X="5.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAKAAAAJQAQBAAAAQAQAAAAAAAAAAQABAAAAEAAA=</HashCode>
+      <HashCode>AAAAAKAAAABQAABAAAAAAQAAAAAAAAAAQABAAAAEAAA=</HashCode>
       <FileName>GestorInvestigadores.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="practica3BBDD.Investigadores" Collapsed="true">
     <Position X="7.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAABAQBAIChAAAAhAICAgAgAAJAAEAADABAEAI=</HashCode>
+      <HashCode>AABAAAAABAQBAAChAAAABAICAgAAAABAAEAAAABAAAI=</HashCode>
       <FileName>Investigadores.vb</FileName>
     </TypeIdentifier>
   </Class>

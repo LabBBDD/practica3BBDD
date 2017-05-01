@@ -26,16 +26,13 @@ Partial Class Menu
         Me.btnConferencia = New System.Windows.Forms.Button()
         Me.btnArticulos = New System.Windows.Forms.Button()
         Me.btnAutor = New System.Windows.Forms.Button()
-        Me.btnAsiste = New System.Windows.Forms.Button()
-        Me.btnAbrirBD = New System.Windows.Forms.Button()
-        Me.lblRuta = New System.Windows.Forms.Label()
         Me.ListBoxInvestigadores = New System.Windows.Forms.ListBox()
         Me.ListBoxConferencias = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'btnInvestigador
         '
-        Me.btnInvestigador.Location = New System.Drawing.Point(404, 12)
+        Me.btnInvestigador.Location = New System.Drawing.Point(373, 44)
         Me.btnInvestigador.Name = "btnInvestigador"
         Me.btnInvestigador.Size = New System.Drawing.Size(75, 23)
         Me.btnInvestigador.TabIndex = 0
@@ -44,7 +41,7 @@ Partial Class Menu
         '
         'btnConferencia
         '
-        Me.btnConferencia.Location = New System.Drawing.Point(404, 41)
+        Me.btnConferencia.Location = New System.Drawing.Point(373, 73)
         Me.btnConferencia.Name = "btnConferencia"
         Me.btnConferencia.Size = New System.Drawing.Size(75, 23)
         Me.btnConferencia.TabIndex = 1
@@ -53,7 +50,7 @@ Partial Class Menu
         '
         'btnArticulos
         '
-        Me.btnArticulos.Location = New System.Drawing.Point(404, 70)
+        Me.btnArticulos.Location = New System.Drawing.Point(373, 102)
         Me.btnArticulos.Name = "btnArticulos"
         Me.btnArticulos.Size = New System.Drawing.Size(75, 23)
         Me.btnArticulos.TabIndex = 2
@@ -62,38 +59,12 @@ Partial Class Menu
         '
         'btnAutor
         '
-        Me.btnAutor.Location = New System.Drawing.Point(404, 128)
+        Me.btnAutor.Location = New System.Drawing.Point(373, 131)
         Me.btnAutor.Name = "btnAutor"
         Me.btnAutor.Size = New System.Drawing.Size(75, 23)
         Me.btnAutor.TabIndex = 3
         Me.btnAutor.Text = "Autor"
         Me.btnAutor.UseVisualStyleBackColor = True
-        '
-        'btnAsiste
-        '
-        Me.btnAsiste.Location = New System.Drawing.Point(404, 99)
-        Me.btnAsiste.Name = "btnAsiste"
-        Me.btnAsiste.Size = New System.Drawing.Size(75, 23)
-        Me.btnAsiste.TabIndex = 4
-        Me.btnAsiste.Text = "Asiste"
-        Me.btnAsiste.UseVisualStyleBackColor = True
-        '
-        'btnAbrirBD
-        '
-        Me.btnAbrirBD.Location = New System.Drawing.Point(26, 213)
-        Me.btnAbrirBD.Name = "btnAbrirBD"
-        Me.btnAbrirBD.Size = New System.Drawing.Size(75, 23)
-        Me.btnAbrirBD.TabIndex = 5
-        Me.btnAbrirBD.Text = "Abrir BD"
-        Me.btnAbrirBD.UseVisualStyleBackColor = True
-        '
-        'lblRuta
-        '
-        Me.lblRuta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRuta.Location = New System.Drawing.Point(107, 213)
-        Me.lblRuta.Name = "lblRuta"
-        Me.lblRuta.Size = New System.Drawing.Size(280, 69)
-        Me.lblRuta.TabIndex = 6
         '
         'ListBoxInvestigadores
         '
@@ -115,12 +86,9 @@ Partial Class Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 307)
+        Me.ClientSize = New System.Drawing.Size(482, 217)
         Me.Controls.Add(Me.ListBoxConferencias)
         Me.Controls.Add(Me.ListBoxInvestigadores)
-        Me.Controls.Add(Me.lblRuta)
-        Me.Controls.Add(Me.btnAbrirBD)
-        Me.Controls.Add(Me.btnAsiste)
         Me.Controls.Add(Me.btnAutor)
         Me.Controls.Add(Me.btnArticulos)
         Me.Controls.Add(Me.btnConferencia)
@@ -135,9 +103,6 @@ Partial Class Menu
     Friend WithEvents btnConferencia As Button
     Friend WithEvents btnArticulos As Button
     Friend WithEvents btnAutor As Button
-    Friend WithEvents btnAsiste As Button
-    Friend WithEvents btnAbrirBD As Button
-    Friend WithEvents lblRuta As Label
     Friend WithEvents ListBoxInvestigadores As ListBox
     Friend WithEvents ListBoxConferencias As ListBox
 End Class

@@ -74,7 +74,6 @@
   <ItemGroup>
     <Compile Include="AgenteBD.vb" />
     <Compile Include="Articulos.vb" />
-    <Compile Include="Asiste.vb" />
     <Compile Include="Autores.vb" />
     <Compile Include="AñadirArticulos.Designer.vb">
       <DependentUpon>AñadirArticulos.vb</DependentUpon>
@@ -101,15 +100,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conferencia.vb" />
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="GestorArticulos.vb" />
-    <Compile Include="GestorAsiste.vb" />
     <Compile Include="GestorAutores.vb" />
     <Compile Include="GestorConferencia.vb" />
     <Compile Include="GestorInvestigadores.vb" />
@@ -148,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AñadirInvestigadores.resx">
       <DependentUpon>AñadirInvestigadores.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>

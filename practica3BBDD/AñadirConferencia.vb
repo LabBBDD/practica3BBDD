@@ -1,82 +1,108 @@
 ﻿Public Class AñadirConferencia
-    Dim conferencia As Conferencia
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    Dim conferenciaActual As Conferencia
+
+    Private Sub loadFormAnConf(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        actualizarLB()
 
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+    Private Sub LBConferencias_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LBConferencias.SelectedIndexChanged
 
-    End Sub
+        conferenciaActual = practica3BBDD.Menu.getGestConf().readConferencia(LBConferencias.SelectedItem)
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
+        txtIdConferencia.Text = conferenciaActual.id_Conferencia
+        txtSiglas.Text = conferenciaActual.nombre_siglas
+        txtNombre.Text = conferenciaActual.nombre_
+        txtLugar.Text = conferenciaActual.nombre_lugar
+        txtFechaInicio.Text = conferenciaActual.fechainicio
+        txtFechaFin.Text = conferenciaActual.fechafin
 
     End Sub
 
     Private Sub btnAñadir_Click(sender As Object, e As EventArgs) Handles btnAñadir.Click
 
-    End Sub
-
-    Private Sub AñadirConferencia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If comprobarTxts() Then
+            Dim aux As Conferencia
+            Try
+                aux = New Conferencia(txtIdConferencia.Text,
+                                      txtSiglas.Text,
+                                      txtNombre.Text,
+                                      txtLugar.Text,
+                                      txtFechaInicio.Text,
+                                      txtFechaFin.Text)
+                practica3BBDD.Menu.getGestConf().create(aux)
+                actualizarLB()
+            Catch ex As System.Data.OleDb.OleDbException
+                MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido añadir la conferencia.")
+                Exit Sub
+            End Try
+        Else
+            MessageBox.Show("Rellene todos los campos e intentelo de nuevo")
+        End If
 
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        If Not IsNothing(ListBox1.SelectedItem) Then
+
+        If Not (LBConferencias.SelectedIndex = -1) Then
             Try
-                conferencia.borrar()
+                practica3BBDD.Menu.getGestConf().delete(conferenciaActual)
             Catch ex As System.Data.OleDb.OleDbException
-                MessageBox.Show("FALLO EN LA BASE DE DATOS")
+                MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido eliminar el registro.")
                 Exit Sub
-            Catch ex As Exception
-                MessageBox.Show("FALLO NO REGISTRADO")
             End Try
         Else
-            Try
-                conferencia.borrar()
-            Catch ex As System.Data.OleDb.OleDbException
-                MsgBox("FALLO EN LA BASE DE DATOS.")
-                Exit Sub
-            Catch ex As Exception
-                MsgBox("FALLO NO REGISTRADO")
-            End Try
+            MessageBox.Show("Seleccione una conferencia para eliminarla")
         End If
-        AñadirConferencia_Load(sender, e)
-    End Sub
+        actualizarLB()
 
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-        conferencia = New Conferencia(ListBox1.SelectedItem)
-        conferencia.leer()
-        txtIdConferencia.Text = conferencia.id_Conferencia
-        txtSiglas.Text = conferencia.nombre_siglas
-        txtNombre.Text = conferencia.nombre_
-        txtLugar.Text = conferencia.nombre_lugar
-        txtFechaInicio.Text = conferencia.fechainicio
-        txtFechaFin.Text = conferencia.fechafin
-
-        'CARGAR LISTBOX CON LOS GENEROS ATRIBUIDOS
-        ListBox1.Items.Clear()
-        conferencia = New Conferencia
-        conferencia.leerTodo()
-        For Each pAux2 As Conferencia In conferencia._gestor.lista
-            conferencia = New Conferencia
-            conferencia.leer()
-            If Not conferencia._gestor.lista Is Nothing Then
-                For Each pAux3 As Conferencia In conferencia._gestor.lista
-                    If pAux2.id_Conferencia = pAux3.id_Conferencia Then
-                        'generos en los que si estamos
-                        ListBox1.Items.Add(pAux2.nombre_)
-                    End If
-                Next
-            End If
-        Next
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        conferencia.id_Conferencia = txtIdConferencia.Text
-        conferencia.nombre_siglas = txtSiglas.Text
-        conferencia.nombre_ = txtNombre.Text
-        conferencia.nombre_lugar = txtLugar.Text
-        conferencia.fechainicio = txtFechaInicio.Text
-        conferencia.fechafin = txtFechaFin.Text
+
+        conferenciaActual.id_Conferencia = txtIdConferencia.Text
+        conferenciaActual.nombre_siglas = txtSiglas.Text
+        conferenciaActual.nombre_ = txtNombre.Text
+        conferenciaActual.nombre_lugar = txtLugar.Text
+        conferenciaActual.fechainicio = txtFechaInicio.Text
+        conferenciaActual.fechafin = txtFechaFin.Text
+
+        Try
+            practica3BBDD.Menu.getGestConf().update(conferenciaActual)
+            actualizarLB()
+        Catch ex As System.Data.OleDb.OleDbException
+            MessageBox.Show("Fallo en la base de datos." & vbCr & vbCr &
+                            "No se ha podido modificar el registro." & vbCr &
+                            "Compruebe que el atributo ID no esté repetido")
+        End Try
+
     End Sub
+
+    Private Function comprobarTxts()
+
+        If (txtFechaFin.Text.Length > 0 AndAlso
+            txtFechaInicio.Text.Length > 0 AndAlso
+            txtIdConferencia.Text.Length > 0 AndAlso
+            txtLugar.Text.Length > 0 AndAlso
+            txtNombre.Text.Length > 0 AndAlso
+            txtSiglas.Text.Length > 0) Then
+
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+    Private Sub actualizarLB()
+
+        LBConferencias.Items.Clear()
+        For Each aux As Conferencia In practica3BBDD.Menu.getGestConf().lista
+            LBConferencias.Items.Add(aux.nombre_)
+        Next
+
+    End Sub
+
 End Class

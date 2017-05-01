@@ -1,69 +1,80 @@
 ﻿Imports System.Data.OleDb
+
 Public Class GestorArticulos
+
     Private _lista As Collection
-    Dim articulo As Articulos
-    Dim agente As AgenteBD
     Dim bbdd As OleDbDataReader
     Dim num As Integer
-    Dim investigador As Investigadores
 
     Public Sub New()
-        Me.lista = New Collection
+
+        lista = New Collection
+        readAll()
+
     End Sub
 
     Public Property lista As Collection
+
         Get
             Return _lista
         End Get
         Set(value As Collection)
             _lista = value
         End Set
+
     End Property
 
     Public Sub readAll()
-        agente = AgenteBD.getAgente
-        bbdd = agente.read("SELECT * FROM Peliculas")
+
+        Dim agente As AgenteBD
+        agente = Menu.getAgente()
+        bbdd = agente.read("SELECT * FROM ARTICULOS ")
+        Dim aux As Articulos
+        _lista = New Collection
         While bbdd.Read()
-            investigador = New Investigadores(bbdd(0), bbdd(1), bbdd(2), bbdd(3), bbdd(4), bbdd(5), bbdd(6), bbdd(7))
-            Me.lista.Add(investigador)
+            aux = New Articulos(bbdd(0), bbdd(1), bbdd(2), bbdd(3), bbdd(4))
+            lista.Add(aux)
         End While
+
     End Sub
 
-    Public Sub readArticulo(ByRef articulo As Articulos)
-        agente = AgenteBD.getAgente
-        bbdd = agente.read("SELECT * FROM Articulos WHERE Invest='" & articulo.id_articulo & "';")
-        While bbdd.Read()
-            articulo.nombre_titulo = bbdd(0)
-            articulo.nombre_conferencia = bbdd(2)
-            articulo.num_pag_inicio = bbdd(3)
-            articulo.num_pag_fin = bbdd(4)
-        End While
-    End Sub
+    Public Function readArticulo(ByRef titulo As String)
 
-    Public Sub readConferencia(ByVal investigador As Investigadores, ByVal conferencia As Conferencia) 'leer investigador de la tabla ASISTE
-        agente = AgenteBD.getAgente
-        bbdd = agente.read("SELECT * FROM ASISTE WHERE Investigador=" & investigador.num_Id_Invest & " and Conferencia=" & conferencia.id_Conferencia & ";")
+        Dim agente As AgenteBD
+        agente = Menu.getAgente()
+        bbdd = agente.read("SELECT * FROM ARTICULOS WHERE Titulo='" & titulo & "';")
         While bbdd.Read()
-            conferencia = New Conferencia()
-            conferencia.id_Conferencia = bbdd(1)
-            Me.lista.Add(conferencia)
+            Return bbdd.Item(0)
         End While
-    End Sub
+
+    End Function
 
     Public Sub create(ByVal articulo As Articulos)
-        agente = AgenteBD.getAgente()
-        num = agente.create("INSERT INTO Articulo(Id Articulo, Titulo, Conferencia, Pag Inicio, Pag Fin) VALUES('" & articulo.nombre_titulo & "','" & articulo.nombre_conferencia & "','" & articulo.num_pag_inicio & "','" & articulo.num_pag_fin & "');")
+
+        Dim agente As AgenteBD
+        agente = Menu.getAgente()
+        num = agente.create("INSERT INTO ARTICULOS(idArticulo, Titulo, Conferencia, pag_inicio, pag_fin) VALUES('" & articulo.id_articulo & "','" & articulo.nombre_titulo & "','" & articulo.nombre_conferencia & "','" & articulo.num_pag_inicio & "','" & articulo.num_pag_fin & "');")
+        readAll()
+
     End Sub
 
     Public Sub update(ByVal articulo As Articulos)
-        agente = AgenteBD.getAgente()
-        num = agente.update("UPDATE Articulo SET Titulo='" & articulo.nombre_titulo & "' , Conferencia='" & articulo.nombre_conferencia & "' , Pag Inicio='" & articulo.num_pag_inicio & "' , Pag Fin='" & articulo.num_pag_fin & "'WHERE IdArticulo=" & articulo.id_articulo & ";")
+
+        Dim agente As AgenteBD
+        agente = Menu.getAgente()
+        num = agente.update("UPDATE ARTICULOS SET Titulo='" & articulo.nombre_titulo & "' , Conferencia='" & articulo.nombre_conferencia & "' , Pag Inicio='" & articulo.num_pag_inicio & "' , Pag Fin='" & articulo.num_pag_fin & "'WHERE IdArticulo=" & articulo.id_articulo & ";")
+        readAll()
+
     End Sub
 
     Public Sub delete(ByVal articulo As Articulos)
-        agente = AgenteBD.getAgente()
-        num = agente.delete("DELETE FROM Personas WHERE idInvest=" & articulo.id_articulo & "")
-        num = agente.delete("DELETE FROM PARTICIPA WHERE Investigador=" & articulo.id_articulo & "")
+
+        Dim agente As AgenteBD
+        agente = Menu.getAgente()
+        num = agente.delete("DELETE FROM AUTOR WHERE Articulo='" & articulo.id_articulo & "';")
+        num = agente.delete("DELETE FROM ARTICULOS WHERE idArticulo='" & articulo.id_articulo & "';")
+        readAll()
+
     End Sub
 
 End Class
