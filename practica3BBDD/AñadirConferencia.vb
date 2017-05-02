@@ -33,7 +33,6 @@
                                       txtFechaInicio.Text,
                                       txtFechaFin.Text)
                 practica3BBDD.Menu.getGestConf().create(aux)
-                actualizarLB()
             Catch ex As System.Data.OleDb.OleDbException
                 MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido añadir la conferencia.")
                 Exit Sub
@@ -41,6 +40,7 @@
         Else
             MessageBox.Show("Rellene todos los campos e intentelo de nuevo")
         End If
+        actualizarLB()
 
     End Sub
 
@@ -49,6 +49,7 @@
         If Not (LBConferencias.SelectedIndex = -1) Then
             Try
                 practica3BBDD.Menu.getGestConf().delete(conferenciaActual)
+                actualizarLB()
             Catch ex As System.Data.OleDb.OleDbException
                 MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido eliminar el registro.")
                 Exit Sub
@@ -62,15 +63,16 @@
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
-        conferenciaActual.id_Conferencia = txtIdConferencia.Text
-        conferenciaActual.nombre_siglas = txtSiglas.Text
-        conferenciaActual.nombre_ = txtNombre.Text
-        conferenciaActual.nombre_lugar = txtLugar.Text
-        conferenciaActual.fechainicio = txtFechaInicio.Text
-        conferenciaActual.fechafin = txtFechaFin.Text
+        Dim confMod As Conferencia
+        confMod = New Conferencia(txtIdConferencia.Text,
+                                  txtSiglas.Text,
+                                  txtNombre.Text,
+                                  txtLugar.Text,
+                                  txtFechaInicio.Text,
+                                  txtFechaFin.Text)
 
         Try
-            practica3BBDD.Menu.getGestConf().update(conferenciaActual)
+            practica3BBDD.Menu.getGestConf().update(confMod, conferenciaActual)
             actualizarLB()
         Catch ex As System.Data.OleDb.OleDbException
             MessageBox.Show("Fallo en la base de datos." & vbCr & vbCr &

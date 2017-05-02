@@ -50,21 +50,21 @@ Partial Class AñadirInvestigadores
         Me.LBInvestigadores.Location = New System.Drawing.Point(21, 25)
         Me.LBInvestigadores.Name = "LBInvestigadores"
         Me.LBInvestigadores.Size = New System.Drawing.Size(135, 212)
-        Me.LBInvestigadores.TabIndex = 1
+        Me.LBInvestigadores.TabIndex = 15
         '
         'txtIdInvest
         '
         Me.txtIdInvest.Location = New System.Drawing.Point(251, 25)
         Me.txtIdInvest.Name = "txtIdInvest"
         Me.txtIdInvest.Size = New System.Drawing.Size(100, 20)
-        Me.txtIdInvest.TabIndex = 2
+        Me.txtIdInvest.TabIndex = 1
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(251, 51)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 3
+        Me.txtNombre.TabIndex = 2
         '
         'txtDespacho
         '
@@ -78,28 +78,28 @@ Partial Class AñadirInvestigadores
         Me.txtApellidos.Location = New System.Drawing.Point(251, 77)
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(100, 20)
-        Me.txtApellidos.TabIndex = 5
+        Me.txtApellidos.TabIndex = 3
         '
         'txtEdificio
         '
         Me.txtEdificio.Location = New System.Drawing.Point(251, 129)
         Me.txtEdificio.Name = "txtEdificio"
         Me.txtEdificio.Size = New System.Drawing.Size(100, 20)
-        Me.txtEdificio.TabIndex = 6
+        Me.txtEdificio.TabIndex = 5
         '
         'txtDepartamento
         '
         Me.txtDepartamento.Location = New System.Drawing.Point(251, 155)
         Me.txtDepartamento.Name = "txtDepartamento"
         Me.txtDepartamento.Size = New System.Drawing.Size(100, 20)
-        Me.txtDepartamento.TabIndex = 7
+        Me.txtDepartamento.TabIndex = 6
         '
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(251, 181)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
-        Me.txtTelefono.TabIndex = 8
+        Me.txtTelefono.TabIndex = 7
         '
         'Label1
         '
@@ -178,14 +178,14 @@ Partial Class AñadirInvestigadores
         Me.txtEmail.Location = New System.Drawing.Point(251, 206)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(100, 20)
-        Me.txtEmail.TabIndex = 17
+        Me.txtEmail.TabIndex = 8
         '
         'btnAñadir
         '
         Me.btnAñadir.Location = New System.Drawing.Point(388, 54)
         Me.btnAñadir.Name = "btnAñadir"
         Me.btnAñadir.Size = New System.Drawing.Size(75, 23)
-        Me.btnAñadir.TabIndex = 18
+        Me.btnAñadir.TabIndex = 9
         Me.btnAñadir.Text = "Añadir"
         Me.btnAñadir.UseVisualStyleBackColor = True
         '
@@ -194,7 +194,7 @@ Partial Class AñadirInvestigadores
         Me.btnModificar.Location = New System.Drawing.Point(388, 114)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 19
+        Me.btnModificar.TabIndex = 10
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
@@ -203,7 +203,7 @@ Partial Class AñadirInvestigadores
         Me.btnEliminar.Location = New System.Drawing.Point(388, 177)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEliminar.TabIndex = 20
+        Me.btnEliminar.TabIndex = 11
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -211,7 +211,7 @@ Partial Class AñadirInvestigadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 262)
+        Me.ClientSize = New System.Drawing.Size(504, 264)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAñadir)

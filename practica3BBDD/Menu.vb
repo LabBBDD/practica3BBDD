@@ -29,7 +29,7 @@
         ventanaAbrirBBDD.Filter = "Archivos de base de datos|*.accdb"
 
         If ventanaAbrirBBDD.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            Me.Cursor = New Cursor(ventanaAbrirBBDD.OpenFile())
+            'Me.Cursor = New Cursor(ventanaAbrirBBDD.OpenFile())
             agente = New AgenteBD(ventanaAbrirBBDD.FileName)
         End If
 
@@ -44,6 +44,10 @@
         For Each pAux1 As Conferencia In gestorConf.lista
             ListBoxConferencias.Items.Add(pAux1.id_Conferencia)
         Next
+
+        gestorArt = New GestorArticulos()
+        gestorArt.readAll()
+
     End Sub
 
     Private Sub ListBoxInvestigadores_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBoxInvestigadores.SelectedIndexChanged

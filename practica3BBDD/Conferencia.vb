@@ -7,7 +7,7 @@
     Private fecha_inicio As String
     Private fecha_fin As String
 
-    Public Sub New(ByVal IDConferencia As String, ByVal Siglas As String, ByVal Nombre As String, ByVal Lugar As String, ByVal Fecha_Inicio As String, ByVal Fecha_Fin As String)
+    Public Sub New(ByVal IDConferencia As Integer, ByVal Siglas As String, ByVal Nombre As String, ByVal Lugar As String, ByVal Fecha_Inicio As String, ByVal Fecha_Fin As String)
 
         Me.idConferencia = IDConferencia
         Me.siglas = Siglas

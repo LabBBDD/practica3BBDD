@@ -66,17 +66,18 @@
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
-        investigadorActual.num_Id_Invest = txtIdInvest.Text
-        investigadorActual.Nombre_Invest = txtNombre.Text
-        investigadorActual.Apellido_Invest = txtApellidos.Text
-        investigadorActual.nombre_Despacho = txtDespacho.Text
-        investigadorActual.nombre_Edificio = txtEdificio.Text
-        investigadorActual.nombre_Departamento = txtDepartamento.Text
-        investigadorActual.num_Telefono = txtTelefono.Text
-        investigadorActual.direccion_email = txtEdificio.Text
+        Dim investMod As Investigadores
+        investMod = New Investigadores(txtIdInvest.Text,
+                                       txtNombre.Text,
+                                       txtApellidos.Text,
+                                       txtDespacho.Text,
+                                       txtEdificio.Text,
+                                       txtDepartamento.Text,
+                                       txtTelefono.Text,
+                                       txtEmail.Text)
 
         Try
-            practica3BBDD.Menu.getGestInvest().update(investigadorActual)
+            practica3BBDD.Menu.getGestInvest().update(investigadorActual, investMod)
             actualizarLB()
         Catch ex As System.Data.OleDb.OleDbException
             MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr &

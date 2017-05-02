@@ -6,10 +6,10 @@
     Private despacho As String
     Private edificio As String
     Private departamento As String
-    Private telefono As String
+    Private telefono As Integer
     Private email As String
 
-    Public Sub New(ByVal IDInvest As String, ByVal Nombre As String, ByVal Apellidos As Integer, ByVal Despacho As String, ByVal Edificio As String, ByVal Departamento As String, ByVal Telefono As Integer, ByVal Email As String)
+    Public Sub New(ByVal IDInvest As String, ByVal Nombre As String, ByVal Apellidos As String, ByVal Despacho As String, ByVal Edificio As String, ByVal Departamento As String, ByVal Telefono As Integer, ByVal Email As String)
 
         Me.idInvest = IDInvest
         Me.nombre = Nombre
@@ -22,7 +22,7 @@
 
     End Sub
 
-    Public Sub New(ByVal Nombre As String, ByVal Apellidos As Integer, ByVal Despacho As String, ByVal Edificio As String, ByVal Departamento As String, ByVal Telefono As Integer, ByVal Email As String)
+    Public Sub New(ByVal Nombre As String, ByVal Apellidos As String, ByVal Despacho As String, ByVal Edificio As String, ByVal Departamento As String, ByVal Telefono As Integer, ByVal Email As String)
 
         Me.nombre = Nombre
         Me.apellidos = Apellidos
@@ -110,12 +110,12 @@
 
     End Property
 
-    Public Property num_Telefono As String
+    Public Property num_Telefono As Integer
 
         Get
             Return telefono
         End Get
-        Set(value As String)
+        Set(value As Integer)
             telefono = value
         End Set
 

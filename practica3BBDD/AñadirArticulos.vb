@@ -26,9 +26,10 @@
                                     txtPagFin.Text)
 
                 practica3BBDD.Menu.getGestArt().create(aux)
-
+                actualizarLB()
             Catch ex As System.Data.OleDb.OleDbException
                 MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido añadir la conferencia.")
+                Exit Sub
             End Try
         Else
             MessageBox.Show("Rellene todos los campos e intentelo de nuevo")

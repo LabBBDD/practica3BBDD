@@ -1,6 +1,6 @@
 ﻿Public Class Articulos
 
-    Private idArticulo As Long
+    Private idArticulo As Integer
     Private titulo As String
     Private conferencia As String
     Private pag_inicio As Integer
@@ -20,12 +20,12 @@
 
     End Sub
 
-    Public Property id_articulo As Long
+    Public Property id_articulo As Integer
 
         Get
-            Return titulo
+            Return idArticulo
         End Get
-        Set(value As Long)
+        Set(value As Integer)
             idArticulo = value
         End Set
 

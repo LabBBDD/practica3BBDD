@@ -44,7 +44,11 @@ Public Class GestorArticulos
         agente = Menu.getAgente()
         bbdd = agente.read("SELECT * FROM ARTICULOS WHERE Titulo='" & titulo & "';")
         While bbdd.Read()
-            Return bbdd.Item(0)
+            Return New Articulos(bbdd.Item(0),
+                                 bbdd.Item(1),
+                                 bbdd.Item(2),
+                                 bbdd.Item(3),
+                                 bbdd.Item(4))
         End While
 
     End Function
@@ -53,7 +57,7 @@ Public Class GestorArticulos
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        num = agente.create("INSERT INTO ARTICULOS(idArticulo, Titulo, Conferencia, pag_inicio, pag_fin) VALUES('" & articulo.id_articulo & "','" & articulo.nombre_titulo & "','" & articulo.nombre_conferencia & "','" & articulo.num_pag_inicio & "','" & articulo.num_pag_fin & "');")
+        num = agente.create("INSERT INTO ARTICULOS(idArticulo, Titulo, Conferencia, pag_inicio, pag_fin) VALUES(" & articulo.id_articulo & ",'" & articulo.nombre_titulo & "','" & articulo.nombre_conferencia & "'," & articulo.num_pag_inicio & "," & articulo.num_pag_fin & ");")
         readAll()
 
     End Sub
