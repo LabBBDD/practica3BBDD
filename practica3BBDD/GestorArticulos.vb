@@ -57,7 +57,7 @@ Public Class GestorArticulos
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        num = agente.create("INSERT INTO ARTICULOS(idArticulo, Titulo, Conferencia, pag_inicio, pag_fin) VALUES(" & articulo.id_articulo & ",'" & articulo.nombre_titulo & "','" & articulo.nombre_conferencia & "'," & articulo.num_pag_inicio & "," & articulo.num_pag_fin & ");")
+        num = agente.create("INSERT INTO ARTICULOS(idArticulo, Titulo, Conferencia, pag_inicio, pag_fin) VALUES(" & articulo.id_articulo & ",'" & articulo.nombre_titulo & "'," & articulo.n_conferencia & "," & articulo.num_pag_inicio & "," & articulo.num_pag_fin & ");")
         readAll()
 
     End Sub
@@ -66,7 +66,7 @@ Public Class GestorArticulos
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        num = agente.update("UPDATE ARTICULOS SET Titulo='" & articulo.nombre_titulo & "' , Conferencia='" & articulo.nombre_conferencia & "' , Pag Inicio='" & articulo.num_pag_inicio & "' , Pag Fin='" & articulo.num_pag_fin & "'WHERE IdArticulo=" & articulo.id_articulo & ";")
+        num = agente.update("UPDATE ARTICULOS SET Titulo='" & articulo.nombre_titulo & "' , Conferencia=" & articulo.n_conferencia & " , pag_inicio='" & articulo.num_pag_inicio & "' , pag_fin='" & articulo.num_pag_fin & "'WHERE IdArticulo=" & articulo.id_articulo & ";")
         readAll()
 
     End Sub
@@ -75,8 +75,8 @@ Public Class GestorArticulos
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        num = agente.delete("DELETE FROM AUTOR WHERE Articulo='" & articulo.id_articulo & "';")
-        num = agente.delete("DELETE FROM ARTICULOS WHERE idArticulo='" & articulo.id_articulo & "';")
+        'num = agente.delete("DELETE FROM AUTOR WHERE Articulo='" & articulo.id_articulo & "';")
+        num = agente.delete("DELETE FROM ARTICULOS WHERE idArticulo=" & articulo.id_articulo & ";")
         readAll()
 
     End Sub

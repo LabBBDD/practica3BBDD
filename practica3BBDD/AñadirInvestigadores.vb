@@ -37,14 +37,14 @@
                                          txtTelefono.Text,
                                          txtEmail.Text)
                 practica3BBDD.Menu.getGestInvest().create(aux)
-                actualizarLB()
             Catch ex As System.Data.OleDb.OleDbException
-                MsgBox("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido añadir el investigador.")
+                MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido añadir el investigador.")
                 Exit Sub
             End Try
         Else
             MessageBox.Show("Rellene todos los campos e intentelo de nuevo")
         End If
+        actualizarLB()
 
     End Sub
 

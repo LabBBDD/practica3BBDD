@@ -6,7 +6,7 @@
 
         articuloActual = practica3BBDD.Menu.getGestArt().readArticulo(LBArticulos.SelectedItem)
 
-        txtConferencia.Text = articuloActual.nombre_conferencia
+        txtConferencia.Text = articuloActual.n_conferencia
         txtIdArticulo.Text = articuloActual.id_articulo
         txtPagFin.Text = articuloActual.num_pag_fin
         txtPagInicio.Text = articuloActual.num_pag_inicio
@@ -26,7 +26,7 @@
                                     txtPagFin.Text)
 
                 practica3BBDD.Menu.getGestArt().create(aux)
-                actualizarLB()
+
             Catch ex As System.Data.OleDb.OleDbException
                 MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "No se ha podido añadir la conferencia.")
                 Exit Sub
@@ -34,6 +34,7 @@
         Else
             MessageBox.Show("Rellene todos los campos e intentelo de nuevo")
         End If
+        actualizarLB()
 
     End Sub
 
@@ -62,7 +63,7 @@
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
         articuloActual.id_articulo = txtIdArticulo.Text
-        articuloActual.nombre_conferencia = txtConferencia.Text
+        articuloActual.n_conferencia = txtConferencia.Text
         articuloActual.nombre_titulo = txtTitulo.Text
         articuloActual.num_pag_inicio = txtPagInicio.Text
         articuloActual.num_pag_fin = txtPagFin.Text
@@ -75,6 +76,7 @@
                             "No se ha podido modificar el registro." & vbCr &
                             "Compruebe que el atributo ID no esté repetido")
         End Try
+        actualizarLB()
 
     End Sub
 

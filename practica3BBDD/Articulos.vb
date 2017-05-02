@@ -2,11 +2,11 @@
 
     Private idArticulo As Integer
     Private titulo As String
-    Private conferencia As String
+    Private conferencia As Integer
     Private pag_inicio As Integer
     Private pag_fin As Integer
 
-    Public Sub New(ByVal IDArticulo As Integer, ByVal Titulo As String, ByVal Conferencia As String, ByVal Pag_Inicio As Integer, ByVal Pag_Fin As Integer)
+    Public Sub New(ByVal IDArticulo As Integer, ByVal Titulo As String, ByVal Conferencia As Integer, ByVal Pag_Inicio As Integer, ByVal Pag_Fin As Integer)
 
         Me.idArticulo = IDArticulo
         Me.titulo = Titulo
@@ -42,12 +42,12 @@
 
     End Property
 
-    Public Property nombre_conferencia As String
+    Public Property n_conferencia As Integer
 
         Get
             Return conferencia
         End Get
-        Set(value As String)
+        Set(value As Integer)
             conferencia = value
         End Set
 
