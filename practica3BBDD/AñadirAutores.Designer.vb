@@ -22,7 +22,7 @@ Partial Class AñadirAutores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox = New System.Windows.Forms.ListBox()
+        Me.LBAutores = New System.Windows.Forms.ListBox()
         Me.txtOrden = New System.Windows.Forms.TextBox()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnAñadir = New System.Windows.Forms.Button()
@@ -34,13 +34,13 @@ Partial Class AñadirAutores
         Me.txtArticulo = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'ListBox
+        'LBAutores
         '
-        Me.ListBox.FormattingEnabled = True
-        Me.ListBox.Location = New System.Drawing.Point(20, 19)
-        Me.ListBox.Name = "ListBox"
-        Me.ListBox.Size = New System.Drawing.Size(256, 225)
-        Me.ListBox.TabIndex = 125
+        Me.LBAutores.FormattingEnabled = True
+        Me.LBAutores.Location = New System.Drawing.Point(20, 19)
+        Me.LBAutores.Name = "LBAutores"
+        Me.LBAutores.Size = New System.Drawing.Size(256, 225)
+        Me.LBAutores.TabIndex = 125
         '
         'txtOrden
         '
@@ -142,7 +142,7 @@ Partial Class AñadirAutores
         Me.Controls.Add(Me.txtArticulo)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.txtInvest)
-        Me.Controls.Add(Me.ListBox)
+        Me.Controls.Add(Me.LBAutores)
         Me.Controls.Add(Me.txtOrden)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAñadir)
@@ -155,7 +155,7 @@ Partial Class AñadirAutores
 
     End Sub
 
-    Friend WithEvents ListBox As ListBox
+    Friend WithEvents LBAutores As ListBox
     Friend WithEvents txtOrden As TextBox
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnAñadir As Button

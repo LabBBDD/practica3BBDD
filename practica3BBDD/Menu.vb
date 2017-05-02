@@ -3,6 +3,7 @@
     Dim gestorConf As GestorConferencia
     Dim gestorInvest As GestorInvestigadores
     Dim gestorArt As GestorArticulos
+    Dim gestorAutor As GestorAutores
     Dim agente As AgenteBD
 
     Private Sub btnInvestigador_Click(sender As Object, e As EventArgs) Handles btnInvestigador.Click
@@ -25,7 +26,7 @@
 
         Dim ventanaAbrirBBDD As New OpenFileDialog()
         ventanaAbrirBBDD.Title = "Selecciona una base de datos"
-        ventanaAbrirBBDD.Filter = "Archivos de base de datos|*.accbd"
+        ventanaAbrirBBDD.Filter = "Archivos de base de datos|*.accdb"
 
         If ventanaAbrirBBDD.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Me.Cursor = New Cursor(ventanaAbrirBBDD.OpenFile())
@@ -67,6 +68,10 @@
 
     Public Function getGestArt() As GestorArticulos
         Return gestorArt
+    End Function
+
+    Public Function getGestAut() As GestorAutores
+        Return gestorAutor
     End Function
 
 End Class

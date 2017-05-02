@@ -1,23 +1,18 @@
 ﻿Public Class AñadirAutores
-    Dim autor As Autores
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-
-
-    Private Sub LabelNombre_Click(sender As Object, e As EventArgs) Handles LabelNombre.Click
-
-    End Sub
 
     Private Sub btnAñadir_Click_1(sender As Object, e As EventArgs) Handles btnAñadir.Click
-        If Not String.IsNullOrEmpty(txtOrden.Text) Then
+
+        Dim aux As Autores
+
+        If comprobarTxts() Then
             Try
-                autor = New Autores(txtInvest.Text, txtArticulo.Text, txtOrden.Text)
-                autor.añadir()
-                AñadirAutores_Load(sender, e)
+                aux = New Autores(txtInvest.Text,
+                                  txtArticulo.Text,
+                                  txtOrden.Text)
+                practica3BBDD.Menu.getGestAut().create(aux)
+
             Catch ex As System.Data.OleDb.OleDbException
-                MsgBox("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "El atributo ID está repetido, por favor cambie dicho atributo para el nuevo registro.")
+                MessageBox.Show("FALLO EN LA BASE DE DATOS." & vbCr & vbCr & "El atributo ID está repetido, por favor cambie dicho atributo para el nuevo registro.")
                 Exit Sub
             Catch ex As Exception
                 MessageBox.Show("FALLO AL AÑADIR EL REGISTRO.")
@@ -27,10 +22,31 @@
     End Sub
 
     Private Sub AñadirAutores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ListBox.Items.Clear()
-        autor = New Autores(txtInvest.Text, txtArticulo.Text, txtOrden.Text)
-        autor.leerTodo()
 
+        actualizarLB()
 
     End Sub
+
+    Private Function comprobarTxts()
+
+        If (txtArticulo.Text.Length > 0 AndAlso
+                txtInvest.Text.Length > 0 AndAlso
+                txtOrden.Text.Length > 0) Then
+
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+    Private Sub actualizarLB()
+
+        LBAutores.Items.Clear()
+        For Each aux As Conferencia In practica3BBDD.Menu.getGestAut().lista
+            LBAutores.Items.Add(aux.nombre_)
+        Next
+
+    End Sub
+
 End Class
