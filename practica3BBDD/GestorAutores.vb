@@ -29,7 +29,7 @@ Public Class GestorAutores
         Dim agente As AgenteBD
         agente = Menu.getAgente()
         Dim aux As Autores
-        bbdd = agente.read("SELECT * FROM ")
+        bbdd = agente.read("SELECT * FROM AUTOR")
         While bbdd.Read()
 
             aux = New Autores(bbdd(0), bbdd(1), bbdd(2))
@@ -38,24 +38,24 @@ Public Class GestorAutores
         End While
     End Sub
 
-    Public Sub readAutor(ByRef autor As Autores)
+    Public Function readAutor(ByRef idInvest As Integer, idArt As Integer) As Autores
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        bbdd = agente.read("SELECT * FROM AUTORES WHERE Invest='" & autor.nombre_Invest & "';")
+        bbdd = agente.read("SELECT * FROM AUTOR WHERE Invest=" & idInvest & " AND Articulo=" & idArt & ";")
         While bbdd.Read()
-            autor.nombre_Articulo = bbdd(0)
-            autor.num_orden = bbdd(1)
+            Return New Autores(bbdd.Item(0), bbdd.Item(1), bbdd.Item(2))
         End While
 
-    End Sub
+    End Function
 
 
     Public Sub create(ByVal autor As Autores)
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        num = agente.create("INSERT INTO Autores(Invest, Articulo, Orden) VALUES('" & autor.nombre_Invest & "','" & autor.nombre_Articulo & "','" & autor.num_orden & "');")
+        num = agente.create("INSERT INTO AUTOR(Invest, Articulo, Orden) VALUES('" & autor.nombre_Invest & "','" & autor.nombre_Articulo & "','" & autor.num_orden & "');")
+        readAll()
 
     End Sub
 
@@ -63,7 +63,8 @@ Public Class GestorAutores
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        num = agente.update("UPDATE Autores SET Invest='" & autor.nombre_Invest & "' , Articulo='" & autor.nombre_Articulo & "' , Orden='" & autor.num_orden & ";")
+        num = agente.update("UPDATE AUTOR SET Orden=" & autor.num_orden & " WHERE Invest=" & autor.nombre_Invest & " AND Articulo=" & autor.nombre_Articulo & ";")
+        readAll()
 
     End Sub
 
@@ -71,10 +72,8 @@ Public Class GestorAutores
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
-        num = agente.delete("DELETE FROM AUTORES WHERE Invest='" & autor.nombre_Invest & "';")
-        num = agente.delete("DELETE FROM ASISTE WHERE Autores='" & autor.nombre_Invest & "';")
-        num = agente.delete("DELETE FROM INVESTIGADORES WHERE idInvest='" & autor.nombre_Invest & "';")
-        num = agente.delete("DELETE FROM ARTICULOS WHERE idArticulo='" & autor.nombre_Articulo & "';")
+        num = agente.delete("DELETE FROM AUTOR WHERE Invest=" & autor.nombre_Invest & " AND Articulo=" & autor.nombre_Articulo & ";")
+        readAll()
 
     End Sub
 

@@ -48,6 +48,9 @@
         gestorArt = New GestorArticulos()
         gestorArt.readAll()
 
+        gestorAutor = New GestorAutores()
+        gestorAutor.readAll()
+
     End Sub
 
     Private Sub ListBoxInvestigadores_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBoxInvestigadores.SelectedIndexChanged
