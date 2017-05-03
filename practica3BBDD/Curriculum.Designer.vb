@@ -23,14 +23,13 @@ Partial Class Curriculum
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblEmailT = New System.Windows.Forms.Label()
-        Me.lblTelefonoCV = New System.Windows.Forms.Label()
-        Me.lblDepartamentoCV = New System.Windows.Forms.Label()
-        Me.lblEdificioCV = New System.Windows.Forms.Label()
-        Me.lblDespachoCV = New System.Windows.Forms.Label()
-        Me.lblApellidosCV = New System.Windows.Forms.Label()
-        Me.lblNombreCV = New System.Windows.Forms.Label()
-        Me.lblDatosPersonales = New System.Windows.Forms.Label()
+        Me.lblDatEmail = New System.Windows.Forms.Label()
+        Me.lblDatTelefono = New System.Windows.Forms.Label()
+        Me.lblDatDep = New System.Windows.Forms.Label()
+        Me.lblDatEdificio = New System.Windows.Forms.Label()
+        Me.lblDatDesp = New System.Windows.Forms.Label()
+        Me.lblDatApellidos = New System.Windows.Forms.Label()
+        Me.lblDatNombre = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblTelefono = New System.Windows.Forms.Label()
         Me.lblDepartamento = New System.Windows.Forms.Label()
@@ -39,114 +38,107 @@ Partial Class Curriculum
         Me.lblApellidos = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
-        Me.lblConferenciasAsistidasCV = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblArticulosPublicadosCV = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LBConf = New System.Windows.Forms.ListBox()
+        Me.LBArt = New System.Windows.Forms.ListBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(11, 145)
+        Me.Label2.Location = New System.Drawing.Point(66, 180)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(256, 20)
+        Me.Label2.Size = New System.Drawing.Size(291, 20)
         Me.Label2.TabIndex = 54
         Me.Label2.Text = "CONFERENCIAS ASISTIDAS:"
         '
-        'lblEmailT
+        'lblDatEmail
         '
-        Me.lblEmailT.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmailT.Location = New System.Drawing.Point(79, 121)
-        Me.lblEmailT.Name = "lblEmailT"
-        Me.lblEmailT.Size = New System.Drawing.Size(182, 22)
-        Me.lblEmailT.TabIndex = 53
-        Me.lblEmailT.Text = "Email:"
+        Me.lblDatEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatEmail.Location = New System.Drawing.Point(441, 100)
+        Me.lblDatEmail.Name = "lblDatEmail"
+        Me.lblDatEmail.Size = New System.Drawing.Size(196, 22)
+        Me.lblDatEmail.TabIndex = 53
+        Me.lblDatEmail.Text = "Email:"
         '
-        'lblTelefonoCV
+        'lblDatTelefono
         '
-        Me.lblTelefonoCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefonoCV.Location = New System.Drawing.Point(674, 91)
-        Me.lblTelefonoCV.Name = "lblTelefonoCV"
-        Me.lblTelefonoCV.Size = New System.Drawing.Size(155, 22)
-        Me.lblTelefonoCV.TabIndex = 52
-        Me.lblTelefonoCV.Text = "Telefono:"
+        Me.lblDatTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatTelefono.Location = New System.Drawing.Point(755, 58)
+        Me.lblDatTelefono.Name = "lblDatTelefono"
+        Me.lblDatTelefono.Size = New System.Drawing.Size(155, 22)
+        Me.lblDatTelefono.TabIndex = 52
+        Me.lblDatTelefono.Text = "Telefono:"
         '
-        'lblDepartamentoCV
+        'lblDatDep
         '
-        Me.lblDepartamentoCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDepartamentoCV.Location = New System.Drawing.Point(382, 91)
-        Me.lblDepartamentoCV.Name = "lblDepartamentoCV"
-        Me.lblDepartamentoCV.Size = New System.Drawing.Size(132, 22)
-        Me.lblDepartamentoCV.TabIndex = 51
-        Me.lblDepartamentoCV.Text = "Departamento:"
+        Me.lblDatDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatDep.Location = New System.Drawing.Point(441, 58)
+        Me.lblDatDep.Name = "lblDatDep"
+        Me.lblDatDep.Size = New System.Drawing.Size(171, 22)
+        Me.lblDatDep.TabIndex = 51
+        Me.lblDatDep.Text = "Departamento:"
         '
-        'lblEdificioCV
+        'lblDatEdificio
         '
-        Me.lblEdificioCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEdificioCV.Location = New System.Drawing.Point(94, 89)
-        Me.lblEdificioCV.Name = "lblEdificioCV"
-        Me.lblEdificioCV.Size = New System.Drawing.Size(144, 22)
-        Me.lblEdificioCV.TabIndex = 50
-        Me.lblEdificioCV.Text = "Edificio:"
+        Me.lblDatEdificio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatEdificio.Location = New System.Drawing.Point(89, 58)
+        Me.lblDatEdificio.Name = "lblDatEdificio"
+        Me.lblDatEdificio.Size = New System.Drawing.Size(144, 22)
+        Me.lblDatEdificio.TabIndex = 50
+        Me.lblDatEdificio.Text = "Edificio:"
         '
-        'lblDespachoCV
+        'lblDatDesp
         '
-        Me.lblDespachoCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDespachoCV.Location = New System.Drawing.Point(724, 49)
-        Me.lblDespachoCV.Name = "lblDespachoCV"
-        Me.lblDespachoCV.Size = New System.Drawing.Size(132, 22)
-        Me.lblDespachoCV.TabIndex = 49
-        Me.lblDespachoCV.Text = "Despacho:"
+        Me.lblDatDesp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatDesp.Location = New System.Drawing.Point(755, 16)
+        Me.lblDatDesp.Name = "lblDatDesp"
+        Me.lblDatDesp.Size = New System.Drawing.Size(155, 22)
+        Me.lblDatDesp.TabIndex = 49
+        Me.lblDatDesp.Text = "Despacho:"
         '
-        'lblApellidosCV
+        'lblDatApellidos
         '
-        Me.lblApellidosCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellidosCV.Location = New System.Drawing.Point(393, 49)
-        Me.lblApellidosCV.Name = "lblApellidosCV"
-        Me.lblApellidosCV.Size = New System.Drawing.Size(224, 22)
-        Me.lblApellidosCV.TabIndex = 48
-        Me.lblApellidosCV.Text = "Apellidos:"
+        Me.lblDatApellidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatApellidos.Location = New System.Drawing.Point(441, 16)
+        Me.lblDatApellidos.Name = "lblDatApellidos"
+        Me.lblDatApellidos.Size = New System.Drawing.Size(196, 22)
+        Me.lblDatApellidos.TabIndex = 48
+        Me.lblDatApellidos.Text = "Apellidos:"
         '
-        'lblNombreCV
+        'lblDatNombre
         '
-        Me.lblNombreCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreCV.Location = New System.Drawing.Point(94, 49)
-        Me.lblNombreCV.Name = "lblNombreCV"
-        Me.lblNombreCV.Size = New System.Drawing.Size(208, 22)
-        Me.lblNombreCV.TabIndex = 47
-        Me.lblNombreCV.Text = "Nombre:"
-        '
-        'lblDatosPersonales
-        '
-        Me.lblDatosPersonales.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDatosPersonales.Location = New System.Drawing.Point(12, 9)
-        Me.lblDatosPersonales.Name = "lblDatosPersonales"
-        Me.lblDatosPersonales.Size = New System.Drawing.Size(201, 20)
-        Me.lblDatosPersonales.TabIndex = 46
-        Me.lblDatosPersonales.Text = "DATOS PERSONALES:"
+        Me.lblDatNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatNombre.Location = New System.Drawing.Point(89, 16)
+        Me.lblDatNombre.Name = "lblDatNombre"
+        Me.lblDatNombre.Size = New System.Drawing.Size(208, 22)
+        Me.lblDatNombre.TabIndex = 47
+        Me.lblDatNombre.Text = "Nombre:"
         '
         'lblEmail
         '
         Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(14, 121)
+        Me.lblEmail.Location = New System.Drawing.Point(303, 100)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(59, 22)
+        Me.lblEmail.Size = New System.Drawing.Size(132, 22)
         Me.lblEmail.TabIndex = 45
         Me.lblEmail.Text = "Email:"
         '
         'lblTelefono
         '
         Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(583, 91)
+        Me.lblTelefono.Location = New System.Drawing.Point(643, 58)
         Me.lblTelefono.Name = "lblTelefono"
-        Me.lblTelefono.Size = New System.Drawing.Size(85, 22)
+        Me.lblTelefono.Size = New System.Drawing.Size(95, 22)
         Me.lblTelefono.TabIndex = 44
         Me.lblTelefono.Text = "Telefono:"
         '
         'lblDepartamento
         '
         Me.lblDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDepartamento.Location = New System.Drawing.Point(244, 91)
+        Me.lblDepartamento.Location = New System.Drawing.Point(303, 58)
         Me.lblDepartamento.Name = "lblDepartamento"
         Me.lblDepartamento.Size = New System.Drawing.Size(132, 22)
         Me.lblDepartamento.TabIndex = 43
@@ -155,7 +147,7 @@ Partial Class Curriculum
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(14, 89)
+        Me.Label3.Location = New System.Drawing.Point(6, 58)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 22)
         Me.Label3.TabIndex = 42
@@ -164,7 +156,7 @@ Partial Class Curriculum
         'lblDespacho
         '
         Me.lblDespacho.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDespacho.Location = New System.Drawing.Point(623, 49)
+        Me.lblDespacho.Location = New System.Drawing.Point(643, 16)
         Me.lblDespacho.Name = "lblDespacho"
         Me.lblDespacho.Size = New System.Drawing.Size(95, 22)
         Me.lblDespacho.TabIndex = 41
@@ -173,16 +165,16 @@ Partial Class Curriculum
         'lblApellidos
         '
         Me.lblApellidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellidos.Location = New System.Drawing.Point(308, 49)
+        Me.lblApellidos.Location = New System.Drawing.Point(303, 16)
         Me.lblApellidos.Name = "lblApellidos"
-        Me.lblApellidos.Size = New System.Drawing.Size(91, 22)
+        Me.lblApellidos.Size = New System.Drawing.Size(132, 22)
         Me.lblApellidos.TabIndex = 40
         Me.lblApellidos.Text = "Apellidos:"
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(11, 49)
+        Me.Label1.Location = New System.Drawing.Point(6, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 22)
         Me.Label1.TabIndex = 39
@@ -191,79 +183,86 @@ Partial Class Curriculum
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
-        Me.lblNombre.Location = New System.Drawing.Point(268, 49)
+        Me.lblNombre.Location = New System.Drawing.Point(263, 16)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(0, 13)
         Me.lblNombre.TabIndex = 38
         '
-        'lblConferenciasAsistidasCV
-        '
-        Me.lblConferenciasAsistidasCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblConferenciasAsistidasCV.Location = New System.Drawing.Point(11, 165)
-        Me.lblConferenciasAsistidasCV.Name = "lblConferenciasAsistidasCV"
-        Me.lblConferenciasAsistidasCV.Size = New System.Drawing.Size(309, 189)
-        Me.lblConferenciasAsistidasCV.TabIndex = 55
-        Me.lblConferenciasAsistidasCV.Text = "CONFERENCIAS ASISTIDAS:"
-        '
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(361, 145)
+        Me.Label5.Location = New System.Drawing.Point(593, 180)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(256, 20)
         Me.Label5.TabIndex = 56
         Me.Label5.Text = "ARTICULOS PUBLICADOS"
         '
-        'lblArticulosPublicadosCV
+        'GroupBox1
         '
-        Me.lblArticulosPublicadosCV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblArticulosPublicadosCV.Location = New System.Drawing.Point(361, 165)
-        Me.lblArticulosPublicadosCV.Name = "lblArticulosPublicadosCV"
-        Me.lblArticulosPublicadosCV.Size = New System.Drawing.Size(343, 189)
-        Me.lblArticulosPublicadosCV.TabIndex = 57
-        Me.lblArticulosPublicadosCV.Text = "ARTICULOS PUBLICADOS"
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.lblNombre)
+        Me.GroupBox1.Controls.Add(Me.lblApellidos)
+        Me.GroupBox1.Controls.Add(Me.lblDespacho)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.lblDatEmail)
+        Me.GroupBox1.Controls.Add(Me.lblDepartamento)
+        Me.GroupBox1.Controls.Add(Me.lblDatTelefono)
+        Me.GroupBox1.Controls.Add(Me.lblTelefono)
+        Me.GroupBox1.Controls.Add(Me.lblDatDep)
+        Me.GroupBox1.Controls.Add(Me.lblEmail)
+        Me.GroupBox1.Controls.Add(Me.lblDatEdificio)
+        Me.GroupBox1.Controls.Add(Me.lblDatNombre)
+        Me.GroupBox1.Controls.Add(Me.lblDatDesp)
+        Me.GroupBox1.Controls.Add(Me.lblDatApellidos)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(916, 148)
+        Me.GroupBox1.TabIndex = 58
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Datos personales"
+        '
+        'LBConf
+        '
+        Me.LBConf.FormattingEnabled = True
+        Me.LBConf.Location = New System.Drawing.Point(22, 203)
+        Me.LBConf.Name = "LBConf"
+        Me.LBConf.Size = New System.Drawing.Size(367, 186)
+        Me.LBConf.TabIndex = 59
+        '
+        'LBArt
+        '
+        Me.LBArt.FormattingEnabled = True
+        Me.LBArt.Location = New System.Drawing.Point(526, 203)
+        Me.LBArt.Name = "LBArt"
+        Me.LBArt.Size = New System.Drawing.Size(367, 186)
+        Me.LBArt.TabIndex = 60
         '
         'Curriculum
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(867, 363)
-        Me.Controls.Add(Me.lblArticulosPublicadosCV)
+        Me.ClientSize = New System.Drawing.Size(946, 415)
+        Me.Controls.Add(Me.LBArt)
+        Me.Controls.Add(Me.LBConf)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.lblConferenciasAsistidasCV)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.lblEmailT)
-        Me.Controls.Add(Me.lblTelefonoCV)
-        Me.Controls.Add(Me.lblDepartamentoCV)
-        Me.Controls.Add(Me.lblEdificioCV)
-        Me.Controls.Add(Me.lblDespachoCV)
-        Me.Controls.Add(Me.lblApellidosCV)
-        Me.Controls.Add(Me.lblNombreCV)
-        Me.Controls.Add(Me.lblDatosPersonales)
-        Me.Controls.Add(Me.lblEmail)
-        Me.Controls.Add(Me.lblTelefono)
-        Me.Controls.Add(Me.lblDepartamento)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lblDespacho)
-        Me.Controls.Add(Me.lblApellidos)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lblNombre)
         Me.Name = "Curriculum"
         Me.Text = "Curriculum"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label2 As Label
-    Friend WithEvents lblEmailT As Label
-    Friend WithEvents lblTelefonoCV As Label
-    Friend WithEvents lblDepartamentoCV As Label
-    Friend WithEvents lblEdificioCV As Label
-    Friend WithEvents lblDespachoCV As Label
-    Friend WithEvents lblApellidosCV As Label
-    Friend WithEvents lblNombreCV As Label
-    Friend WithEvents lblDatosPersonales As Label
+    Friend WithEvents lblDatEmail As Label
+    Friend WithEvents lblDatTelefono As Label
+    Friend WithEvents lblDatDep As Label
+    Friend WithEvents lblDatEdificio As Label
+    Friend WithEvents lblDatDesp As Label
+    Friend WithEvents lblDatApellidos As Label
+    Friend WithEvents lblDatNombre As Label
     Friend WithEvents lblEmail As Label
     Friend WithEvents lblTelefono As Label
     Friend WithEvents lblDepartamento As Label
@@ -272,7 +271,8 @@ Partial Class Curriculum
     Friend WithEvents lblApellidos As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblNombre As Label
-    Friend WithEvents lblConferenciasAsistidasCV As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents lblArticulosPublicadosCV As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents LBConf As ListBox
+    Friend WithEvents LBArt As ListBox
 End Class

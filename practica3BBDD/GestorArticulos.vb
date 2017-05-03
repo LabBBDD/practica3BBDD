@@ -38,11 +38,26 @@ Public Class GestorArticulos
 
     End Sub
 
-    Public Function readArticulo(ByRef titulo As String)
+    Public Function readArticulo(ByRef titulo As String) As Articulos
 
         Dim agente As AgenteBD
         agente = Menu.getAgente()
         bbdd = agente.read("SELECT * FROM ARTICULOS WHERE Titulo='" & titulo & "';")
+        While bbdd.Read()
+            Return New Articulos(bbdd.Item(0),
+                                 bbdd.Item(1),
+                                 bbdd.Item(2),
+                                 bbdd.Item(3),
+                                 bbdd.Item(4))
+        End While
+
+    End Function
+
+    Public Function readIdArt(idArt As Integer) As Articulos
+
+        Dim agente As AgenteBD
+        agente = Menu.getAgente()
+        bbdd = agente.read("SELECT * FROM ARTICULOS WHERE idArticulo=" & idArt & ";")
         While bbdd.Read()
             Return New Articulos(bbdd.Item(0),
                                  bbdd.Item(1),

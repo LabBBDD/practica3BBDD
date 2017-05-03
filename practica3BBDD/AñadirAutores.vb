@@ -9,8 +9,8 @@
 
         If comprobarTxts() Then
             Try
-                aux = New Autores(listIdInvest.Item(LBInvest.SelectedIndex),
-                                  listIdArt.Item(LBArt.SelectedIndex),
+                aux = New Autores(listIdInvest.Item(LBInvest.SelectedIndex + 1),
+                                  listIdArt.Item(LBArt.SelectedIndex + 1),
                                   txtOrden.Text)
                 practica3BBDD.Menu.getGestAut().create(aux)
 
@@ -23,6 +23,7 @@
             End Try
         End If
         actualizarLB()
+        txtOrden.Clear()
 
     End Sub
 
@@ -35,6 +36,7 @@
             MessageBox.Show("Fallo en la base de datos." & vbCr & "No se ha podido modificar el registro")
         End Try
         actualizarLB()
+        txtOrden.Clear()
 
     End Sub
 
@@ -48,6 +50,7 @@
             End Try
         End If
         actualizarLB()
+        txtOrden.Clear()
 
     End Sub
 
@@ -62,6 +65,7 @@
     Private Sub AñadirAutores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         actualizarLB()
+        rellenarOrden()
 
     End Sub
 
@@ -69,15 +73,24 @@
 
         If comprobarLBs() Then
 
-            txtOrden.Text = practica3BBDD.Menu.getGestAut().readAutor(listIdInvest.Item(LBInvest.SelectedIndex + 1), listIdArt.Item(LBArt.SelectedIndex + 1)).num_orden
-            If txtOrden.Text.Length > 0 Then
-                btnAñadir.Enabled = False
-                btnEliminar.Enabled = True
-                btnModificar.Enabled = True
-            Else
+            Dim orden As String
+            Dim idInvest As Integer
+            Dim idArt As Integer
+            Dim autor As Autores
+            idInvest = listIdInvest.Item(LBInvest.SelectedIndex + 1)
+            idArt = listIdArt.Item(LBArt.SelectedIndex + 1)
+            autor = practica3BBDD.Menu.getGestAut().readAutor(idInvest, idArt)
+            If autor Is Nothing Then
+                txtOrden.Text = ""
                 btnAñadir.Enabled = True
                 btnEliminar.Enabled = False
                 btnModificar.Enabled = False
+            Else
+                orden = autor.num_orden
+                txtOrden.Text = orden
+                btnAñadir.Enabled = False
+                btnEliminar.Enabled = True
+                btnModificar.Enabled = True
             End If
 
         Else

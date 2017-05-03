@@ -42,6 +42,7 @@ Partial Class AñadirInvestigadores
         Me.btnAñadir = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LBInvestigadores
@@ -49,7 +50,7 @@ Partial Class AñadirInvestigadores
         Me.LBInvestigadores.FormattingEnabled = True
         Me.LBInvestigadores.Location = New System.Drawing.Point(21, 25)
         Me.LBInvestigadores.Name = "LBInvestigadores"
-        Me.LBInvestigadores.Size = New System.Drawing.Size(135, 212)
+        Me.LBInvestigadores.Size = New System.Drawing.Size(135, 238)
         Me.LBInvestigadores.TabIndex = 15
         '
         'txtIdInvest
@@ -97,6 +98,7 @@ Partial Class AñadirInvestigadores
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(251, 181)
+        Me.txtTelefono.MaxLength = 9
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
         Me.txtTelefono.TabIndex = 7
@@ -207,11 +209,21 @@ Partial Class AñadirInvestigadores
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(174, 241)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(177, 23)
+        Me.btnLimpiar.TabIndex = 17
+        Me.btnLimpiar.Text = "Limpiar campos"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'AñadirInvestigadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 264)
+        Me.ClientSize = New System.Drawing.Size(504, 276)
+        Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAñadir)
@@ -259,4 +271,5 @@ Partial Class AñadirInvestigadores
     Friend WithEvents btnAñadir As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnLimpiar As Button
 End Class

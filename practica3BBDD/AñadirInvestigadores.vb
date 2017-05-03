@@ -115,4 +115,16 @@
 
     End Sub
 
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+
+        txtApellidos.Clear()
+        txtDepartamento.Clear()
+        txtDespacho.Clear()
+        txtEdificio.Clear()
+        txtEmail.Clear()
+        txtIdInvest.Clear()
+        txtNombre.Clear()
+        txtTelefono.Clear()
+
+    End Sub
 End Class

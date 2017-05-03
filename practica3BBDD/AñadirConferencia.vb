@@ -107,4 +107,14 @@
 
     End Sub
 
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+
+        txtFechaFin.Clear()
+        txtFechaInicio.Clear()
+        txtIdConferencia.Clear()
+        txtLugar.Clear()
+        txtNombre.Clear()
+        txtSiglas.Clear()
+
+    End Sub
 End Class

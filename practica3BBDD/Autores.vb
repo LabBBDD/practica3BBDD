@@ -9,6 +9,7 @@
         Me.invest = Invest
         Me.articulo = Articulo
         Me.orden = Orden
+
     End Sub
 
     Public Sub New()

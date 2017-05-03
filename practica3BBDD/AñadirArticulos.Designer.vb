@@ -36,6 +36,7 @@ Partial Class AñadirArticulos
         Me.btnAñadir = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LBArticulos
@@ -43,7 +44,7 @@ Partial Class AñadirArticulos
         Me.LBArticulos.FormattingEnabled = True
         Me.LBArticulos.Location = New System.Drawing.Point(12, 27)
         Me.LBArticulos.Name = "LBArticulos"
-        Me.LBArticulos.Size = New System.Drawing.Size(135, 212)
+        Me.LBArticulos.Size = New System.Drawing.Size(135, 238)
         Me.LBArticulos.TabIndex = 0
         '
         'txtIdArticulo
@@ -153,11 +154,21 @@ Partial Class AñadirArticulos
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(180, 242)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(169, 23)
+        Me.btnLimpiar.TabIndex = 14
+        Me.btnLimpiar.Text = "Limpiar campos"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'AñadirArticulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 262)
+        Me.ClientSize = New System.Drawing.Size(490, 281)
+        Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAñadir)
@@ -193,4 +204,5 @@ Partial Class AñadirArticulos
     Friend WithEvents btnAñadir As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnLimpiar As Button
 End Class

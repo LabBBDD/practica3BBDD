@@ -58,6 +58,22 @@ Public Class GestorConferencia
 
     End Function
 
+    Public Function readIdConf(idConf As Integer) As Conferencia
+
+        Dim agente As AgenteBD
+        agente = Menu.getAgente()
+        bbdd = agente.read("SELECT * FROM CONFERENCIAS WHERE idConferencia=" & idConf & ";")
+        While bbdd.Read()
+            Return New Conferencia(bbdd.Item(0),
+                                   bbdd.Item(1),
+                                   bbdd.Item(2),
+                                   bbdd.Item(3),
+                                   bbdd.Item(4),
+                                   bbdd.Item(5))
+        End While
+
+    End Function
+
     Public Sub create(ByVal conferencia As Conferencia)
 
         Dim agente As AgenteBD

@@ -107,6 +107,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GestorArticulos.vb" />
+    <Compile Include="GestorAsiste.vb" />
     <Compile Include="GestorAutores.vb" />
     <Compile Include="GestorConferencia.vb" />
     <Compile Include="GestorInvestigadores.vb" />

@@ -38,6 +38,7 @@ Partial Class AñadirConferencia
         Me.btnAñadir = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LBConferencias
@@ -45,7 +46,7 @@ Partial Class AñadirConferencia
         Me.LBConferencias.FormattingEnabled = True
         Me.LBConferencias.Location = New System.Drawing.Point(25, 23)
         Me.LBConferencias.Name = "LBConferencias"
-        Me.LBConferencias.Size = New System.Drawing.Size(135, 212)
+        Me.LBConferencias.Size = New System.Drawing.Size(135, 251)
         Me.LBConferencias.TabIndex = 2
         '
         'Label1
@@ -171,11 +172,21 @@ Partial Class AñadirConferencia
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(190, 251)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(219, 23)
+        Me.btnLimpiar.TabIndex = 19
+        Me.btnLimpiar.Text = "Limpiar campos"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'AñadirConferencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(559, 262)
+        Me.ClientSize = New System.Drawing.Size(559, 288)
+        Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAñadir)
@@ -215,4 +226,5 @@ Partial Class AñadirConferencia
     Friend WithEvents btnAñadir As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnModificar As Button
+    Friend WithEvents btnLimpiar As Button
 End Class
