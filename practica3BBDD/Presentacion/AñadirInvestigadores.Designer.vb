@@ -222,7 +222,7 @@ Partial Class AñadirInvestigadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 276)
+        Me.ClientSize = New System.Drawing.Size(494, 276)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)

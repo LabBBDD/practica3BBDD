@@ -72,50 +72,50 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgenteBD.vb" />
-    <Compile Include="Articulos.vb" />
-    <Compile Include="Autores.vb" />
-    <Compile Include="AñadirArticulos.Designer.vb">
+    <Compile Include="Persistencia\AgenteBD.vb" />
+    <Compile Include="Persistencia\Articulos.vb" />
+    <Compile Include="Persistencia\Autores.vb" />
+    <Compile Include="Presentacion\AñadirArticulos.Designer.vb">
       <DependentUpon>AñadirArticulos.vb</DependentUpon>
     </Compile>
-    <Compile Include="AñadirArticulos.vb">
+    <Compile Include="Presentacion\AñadirArticulos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AñadirAutores.Designer.vb">
+    <Compile Include="Presentacion\AñadirAutores.Designer.vb">
       <DependentUpon>AñadirAutores.vb</DependentUpon>
     </Compile>
-    <Compile Include="AñadirAutores.vb">
+    <Compile Include="Presentacion\AñadirAutores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AñadirConferencia.Designer.vb">
+    <Compile Include="Presentacion\AñadirConferencia.Designer.vb">
       <DependentUpon>AñadirConferencia.vb</DependentUpon>
     </Compile>
-    <Compile Include="AñadirConferencia.vb">
+    <Compile Include="Presentacion\AñadirConferencia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AñadirInvestigadores.Designer.vb">
+    <Compile Include="Presentacion\AñadirInvestigadores.Designer.vb">
       <DependentUpon>AñadirInvestigadores.vb</DependentUpon>
     </Compile>
-    <Compile Include="AñadirInvestigadores.vb">
+    <Compile Include="Presentacion\AñadirInvestigadores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Conferencia.vb" />
-    <Compile Include="Curriculum.Designer.vb">
+    <Compile Include="Persistencia\Conferencia.vb" />
+    <Compile Include="Presentacion\Curriculum.Designer.vb">
       <DependentUpon>Curriculum.vb</DependentUpon>
     </Compile>
-    <Compile Include="Curriculum.vb">
+    <Compile Include="Presentacion\Curriculum.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestorArticulos.vb" />
-    <Compile Include="GestorAsiste.vb" />
-    <Compile Include="GestorAutores.vb" />
-    <Compile Include="GestorConferencia.vb" />
-    <Compile Include="GestorInvestigadores.vb" />
-    <Compile Include="Investigadores.vb" />
-    <Compile Include="Menu.Designer.vb">
+    <Compile Include="Dominio\GestorArticulos.vb" />
+    <Compile Include="Dominio\GestorAsiste.vb" />
+    <Compile Include="Dominio\GestorAutores.vb" />
+    <Compile Include="Dominio\GestorConferencia.vb" />
+    <Compile Include="Dominio\GestorInvestigadores.vb" />
+    <Compile Include="Persistencia\Investigadores.vb" />
+    <Compile Include="Presentacion\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Menu.vb">
+    <Compile Include="Presentacion\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -135,22 +135,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AñadirArticulos.resx">
+    <EmbeddedResource Include="Presentacion\AñadirArticulos.resx">
       <DependentUpon>AñadirArticulos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AñadirAutores.resx">
+    <EmbeddedResource Include="Presentacion\AñadirAutores.resx">
       <DependentUpon>AñadirAutores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AñadirConferencia.resx">
+    <EmbeddedResource Include="Presentacion\AñadirConferencia.resx">
       <DependentUpon>AñadirConferencia.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AñadirInvestigadores.resx">
+    <EmbeddedResource Include="Presentacion\AñadirInvestigadores.resx">
       <DependentUpon>AñadirInvestigadores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Curriculum.resx">
+    <EmbeddedResource Include="Presentacion\Curriculum.resx">
       <DependentUpon>Curriculum.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Presentacion\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
