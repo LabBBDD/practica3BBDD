@@ -3,8 +3,9 @@
 Public Class AgenteBD
     Private Shared CadConexion = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source="
     Private Shared mConexion As OleDbConnection
+    Private Shared instanciaAgente As AgenteBD
 
-    Public Sub New(ruta As String)
+    Private Sub New(ruta As String)
         mConexion = New OleDbConnection
         mConexion.ConnectionString = (CadConexion + ruta)
         Try
@@ -13,6 +14,16 @@ Public Class AgenteBD
             MessageBox.Show("Error al conectar con datos" & ControlChars.CrLf & excepcion.Message & ControlChars.CrLf & excepcion.Source())
         End Try
     End Sub
+
+    Public Function getAgente()
+
+        If instanciaAgente Is Nothing Then
+            instanciaAgente = New AgenteBD(Menu.abrirBD())
+        End If
+
+        Return instanciaAgente
+
+    End Function
 
     Public Function read(ByVal sql As String) As OleDbDataReader
         Dim com As New OleDbCommand(sql, mConexion)

@@ -45,15 +45,7 @@
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim ventanaAbrirBBDD As New OpenFileDialog()
-        ventanaAbrirBBDD.Title = "Selecciona una base de datos"
-        ventanaAbrirBBDD.Filter = "Archivos de base de datos|*.accdb"
-
-        If ventanaAbrirBBDD.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            agente = New AgenteBD(ventanaAbrirBBDD.FileName)
-        Else
-            Me.Close()
-        End If
+        agente = AgenteBD.getAgente()
 
         actualizarLB()
 
@@ -188,5 +180,19 @@
         BtnCurriculum.Enabled = False
 
     End Sub
+
+    Public Function abrirBD() As String
+
+        Dim ventanaAbrirBBDD As New OpenFileDialog()
+        ventanaAbrirBBDD.Title = "Selecciona una base de datos"
+        ventanaAbrirBBDD.Filter = "Archivos de base de datos|*.accdb"
+
+        If ventanaAbrirBBDD.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Return ventanaAbrirBBDD.FileName
+        Else
+            Me.Close()
+        End If
+
+    End Function
 
 End Class
