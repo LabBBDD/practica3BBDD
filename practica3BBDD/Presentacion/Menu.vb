@@ -7,7 +7,6 @@
     Dim gestorAsiste As GestorAsiste
     Dim investActual As Investigadores
     Dim confActual As Conferencia
-    Dim agente As AgenteBD
 
     Private Sub btnInvestigador_Click(sender As Object, e As EventArgs) Handles btnInvestigador.Click
         AñadirInvestigadores.Show()
@@ -45,7 +44,7 @@
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        agente = AgenteBD.getAgente()
+        AgenteBD.getAgente()
 
         actualizarLB()
 
@@ -107,10 +106,6 @@
         End If
 
     End Sub
-
-    Public Function getAgente() As AgenteBD
-        Return agente
-    End Function
 
     Public Function getGestInvest() As GestorInvestigadores
         Return gestorInvest

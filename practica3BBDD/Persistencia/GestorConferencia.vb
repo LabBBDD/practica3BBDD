@@ -29,7 +29,7 @@ Public Class GestorConferencia
         Dim agente As AgenteBD
         Dim aux As Conferencia
         lista = New Collection
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM CONFERENCIAS")
         While bbdd.Read()
             If IsDBNull(bbdd(5)) Then
@@ -45,7 +45,7 @@ Public Class GestorConferencia
     Public Function readConferencia(nombreConf As String) As Conferencia
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM CONFERENCIAS WHERE Nombre='" & nombreConf & "';")
         While bbdd.Read()
             Return New Conferencia(bbdd.Item(0),
@@ -61,7 +61,7 @@ Public Class GestorConferencia
     Public Function readIdConf(idConf As Integer) As Conferencia
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM CONFERENCIAS WHERE idConferencia=" & idConf & ";")
         While bbdd.Read()
             Return New Conferencia(bbdd.Item(0),
@@ -77,7 +77,7 @@ Public Class GestorConferencia
     Public Sub create(ByVal conferencia As Conferencia)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.create("INSERT INTO CONFERENCIAS(idConferencia,Siglas,Nombre,Lugar,Fecha_inicio,Fecha_fin) VALUES(" & conferencia.id_Conferencia & ",'" & conferencia.nombre_siglas & "','" & conferencia.nombre_ & "','" & conferencia.nombre_lugar & "','" & conferencia.fechainicio & "','" & conferencia.fechafin & "');")
         readAll()
 
@@ -86,7 +86,7 @@ Public Class GestorConferencia
     Public Sub update(ByVal conferencia As Conferencia, confOriginal As Conferencia)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.update("UPDATE CONFERENCIAS SET Siglas='" & conferencia.nombre_siglas & "' , Nombre='" & conferencia.nombre_ & "' , Lugar='" & conferencia.nombre_lugar & "' , Fecha_inicio='" & conferencia.fechainicio & "' , Fecha_fin='" & conferencia.fechafin & "' WHERE idConferencia=" & confOriginal.id_Conferencia & ";")
         readAll()
 
@@ -95,9 +95,8 @@ Public Class GestorConferencia
     Public Sub delete(ByVal conferencia As Conferencia)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.delete("DELETE FROM CONFERENCIAS WHERE idConferencia=" & conferencia.id_Conferencia & ";")
-        'num = agente.delete("DELETE FROM ASISTE WHERE Conferencia=" & conferencia.id_Conferencia & ";")
         readAll()
 
     End Sub

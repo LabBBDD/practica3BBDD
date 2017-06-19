@@ -72,9 +72,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persistencia\AgenteBD.vb" />
-    <Compile Include="Persistencia\Articulos.vb" />
-    <Compile Include="Persistencia\Autores.vb" />
+    <Compile Include="Dominio\AgenteBD.vb" />
+    <Compile Include="Dominio\Articulos.vb" />
+    <Compile Include="Dominio\Autores.vb" />
     <Compile Include="Presentacion\AñadirArticulos.Designer.vb">
       <DependentUpon>AñadirArticulos.vb</DependentUpon>
     </Compile>
@@ -99,19 +99,19 @@
     <Compile Include="Presentacion\AñadirInvestigadores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Persistencia\Conferencia.vb" />
+    <Compile Include="Dominio\Conferencia.vb" />
     <Compile Include="Presentacion\Curriculum.Designer.vb">
       <DependentUpon>Curriculum.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Curriculum.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dominio\GestorArticulos.vb" />
-    <Compile Include="Dominio\GestorAsiste.vb" />
-    <Compile Include="Dominio\GestorAutores.vb" />
-    <Compile Include="Dominio\GestorConferencia.vb" />
-    <Compile Include="Dominio\GestorInvestigadores.vb" />
-    <Compile Include="Persistencia\Investigadores.vb" />
+    <Compile Include="Persistencia\GestorArticulos.vb" />
+    <Compile Include="Persistencia\GestorAsiste.vb" />
+    <Compile Include="Persistencia\GestorAutores.vb" />
+    <Compile Include="Persistencia\GestorConferencia.vb" />
+    <Compile Include="Persistencia\GestorInvestigadores.vb" />
+    <Compile Include="Dominio\Investigadores.vb" />
     <Compile Include="Presentacion\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>

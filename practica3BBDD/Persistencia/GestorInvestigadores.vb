@@ -27,7 +27,7 @@ Public Class GestorInvestigadores
     Public Sub readAll()
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM INVESTIGADORES")
         Dim aux As Investigadores
         _lista = New Collection
@@ -41,7 +41,7 @@ Public Class GestorInvestigadores
     Public Function readInvestigador(nombre As String) As Investigadores
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM INVESTIGADORES WHERE Nombre='" & nombre & "';")
         While bbdd.Read()
             Return New Investigadores(bbdd.Item(0), bbdd.Item(1),
@@ -55,7 +55,7 @@ Public Class GestorInvestigadores
     Public Sub create(ByVal investigador As Investigadores)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.create("INSERT INTO INVESTIGADORES(idInvest,Nombre,Apellidos,Despacho,Edificio,Departamento,Teléfono,Email) VALUES('" & investigador.num_Id_Invest & "','" & investigador.Nombre_Invest & "','" & investigador.Apellido_Invest & "','" & investigador.nombre_Despacho & "','" & investigador.nombre_Edificio & "','" & investigador.nombre_Departamento & "','" & investigador.num_Telefono & "','" & investigador.direccion_email & "');")
         readAll()
 
@@ -64,7 +64,7 @@ Public Class GestorInvestigadores
     Public Sub update(ByVal investigadorOriginal As Investigadores, ByVal investigador As Investigadores)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.update("UPDATE INVESTIGADORES SET Nombre='" & investigador.Nombre_Invest & "' , Apellidos='" & investigador.Apellido_Invest & "' , Despacho='" & investigador.nombre_Despacho & "' , Edificio='" & investigador.nombre_Edificio & "' , Departamento='" & investigador.nombre_Departamento & "' , Teléfono='" & investigador.num_Telefono & "' , Email='" & investigador.direccion_email & "' WHERE idInvest=" & investigadorOriginal.num_Id_Invest & ";")
         readAll()
 
@@ -73,8 +73,7 @@ Public Class GestorInvestigadores
     Public Sub delete(ByVal investigador As Investigadores)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
-        'num = agente.delete("DELETE FROM ASISTE WHERE Invest=" & investigador.num_Id_Invest & ";")
+        agente = AgenteBD.getAgente()
         num = agente.delete("DELETE FROM INVESTIGADORES WHERE idInvest=" & investigador.num_Id_Invest & ";")
         readAll()
 

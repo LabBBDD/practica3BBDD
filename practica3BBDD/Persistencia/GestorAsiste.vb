@@ -62,7 +62,7 @@ Public Class GestorAsiste
     Public Sub readAll()
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM ASISTE")
         listaNomInvest = New Collection
         listaIdInvest = New Collection
@@ -84,7 +84,7 @@ Public Class GestorAsiste
         Dim agente As AgenteBD
         Dim lista As Collection
         lista = New Collection
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM ASISTE WHERE Invest=" & investigador.num_Id_Invest & ";")
         While bbdd.Read()
             lista.Add(bbdd.Item(0))
@@ -98,7 +98,7 @@ Public Class GestorAsiste
         Dim agente As AgenteBD
         Dim lista As Collection
         lista = New Collection
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM AUTOR WHERE Invest=" & investigador.num_Id_Invest & ";")
         While bbdd.Read()
             lista.Add(bbdd.Item(1))
@@ -110,7 +110,7 @@ Public Class GestorAsiste
     Public Function readAsistencia(idInvest As Integer, idConf As Integer)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM ASISTE WHERE Conferencia=" & idConf & " AND Invest=" & idInvest & ";")
         While bbdd.Read()
             Return True
@@ -122,7 +122,7 @@ Public Class GestorAsiste
     Public Sub create(idInvest As Integer, idConf As Integer)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.create("INSERT INTO ASISTE(Conferencia, Invest) VALUES(" & idConf & "," & idInvest & ");")
         readAll()
 
@@ -131,7 +131,7 @@ Public Class GestorAsiste
     Public Sub delete(idInvest As Integer, idConf As Integer)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.delete("DELETE FROM ASISTE WHERE Conferencia=" & idConf & " AND Invest=" & idInvest & ";")
         readAll()
 

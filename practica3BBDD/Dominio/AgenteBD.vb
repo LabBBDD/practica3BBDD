@@ -15,7 +15,7 @@ Public Class AgenteBD
         End Try
     End Sub
 
-    Public Function getAgente()
+    Public Shared Function getAgente()
 
         If instanciaAgente Is Nothing Then
             instanciaAgente = New AgenteBD(Menu.abrirBD())

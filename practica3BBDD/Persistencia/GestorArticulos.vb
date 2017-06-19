@@ -27,7 +27,7 @@ Public Class GestorArticulos
     Public Sub readAll()
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM ARTICULOS ")
         Dim aux As Articulos
         _lista = New Collection
@@ -41,7 +41,7 @@ Public Class GestorArticulos
     Public Function readArticulo(ByRef titulo As String) As Articulos
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM ARTICULOS WHERE Titulo='" & titulo & "';")
         While bbdd.Read()
             Return New Articulos(bbdd.Item(0),
@@ -56,7 +56,7 @@ Public Class GestorArticulos
     Public Function readIdArt(idArt As Integer) As Articulos
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         bbdd = agente.read("SELECT * FROM ARTICULOS WHERE idArticulo=" & idArt & ";")
         While bbdd.Read()
             Return New Articulos(bbdd.Item(0),
@@ -71,7 +71,7 @@ Public Class GestorArticulos
     Public Sub create(ByVal articulo As Articulos)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.create("INSERT INTO ARTICULOS(idArticulo, Titulo, Conferencia, pag_inicio, pag_fin) VALUES(" & articulo.id_articulo & ",'" & articulo.nombre_titulo & "'," & articulo.n_conferencia & "," & articulo.num_pag_inicio & "," & articulo.num_pag_fin & ");")
         readAll()
 
@@ -80,7 +80,7 @@ Public Class GestorArticulos
     Public Sub update(ByVal articulo As Articulos)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
+        agente = AgenteBD.getAgente()
         num = agente.update("UPDATE ARTICULOS SET Titulo='" & articulo.nombre_titulo & "' , Conferencia=" & articulo.n_conferencia & " , pag_inicio='" & articulo.num_pag_inicio & "' , pag_fin='" & articulo.num_pag_fin & "'WHERE IdArticulo=" & articulo.id_articulo & ";")
         readAll()
 
@@ -89,8 +89,7 @@ Public Class GestorArticulos
     Public Sub delete(ByVal articulo As Articulos)
 
         Dim agente As AgenteBD
-        agente = Menu.getAgente()
-        'num = agente.delete("DELETE FROM AUTOR WHERE Articulo='" & articulo.id_articulo & "';")
+        agente = AgenteBD.getAgente()
         num = agente.delete("DELETE FROM ARTICULOS WHERE idArticulo=" & articulo.id_articulo & ";")
         readAll()
 
