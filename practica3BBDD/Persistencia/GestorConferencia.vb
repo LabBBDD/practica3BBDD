@@ -96,7 +96,8 @@ Public Class GestorConferencia
 
         Dim agente As AgenteBD
         agente = AgenteBD.getAgente()
-        num = agente.delete("DELETE FROM CONFERENCIAS WHERE idConferencia=" & conferencia.id_Conferencia & ";")
+        agente.delete("DELETE FROM CONFERENCIAS WHERE idConferencia=" & conferencia.id_Conferencia & ";")
+        agente.delete("DELETE FROM ASISTE WHERE Conferencia=" & conferencia.id_Conferencia & ";")
         readAll()
 
     End Sub

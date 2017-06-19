@@ -74,7 +74,9 @@ Public Class GestorInvestigadores
 
         Dim agente As AgenteBD
         agente = AgenteBD.getAgente()
-        num = agente.delete("DELETE FROM INVESTIGADORES WHERE idInvest=" & investigador.num_Id_Invest & ";")
+        agente.delete("DELETE FROM INVESTIGADORES WHERE idInvest=" & investigador.num_Id_Invest & ";")
+        agente.delete("DELETE FROM ASISTE WHERE Invest=" & investigador.num_Id_Invest & ";")
+        agente.delete("DELETE FROM AUTOR WHERE Invest=" & investigador.num_Id_Invest & ";")
         readAll()
 
     End Sub

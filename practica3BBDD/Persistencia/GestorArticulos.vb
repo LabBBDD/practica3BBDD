@@ -90,7 +90,8 @@ Public Class GestorArticulos
 
         Dim agente As AgenteBD
         agente = AgenteBD.getAgente()
-        num = agente.delete("DELETE FROM ARTICULOS WHERE idArticulo=" & articulo.id_articulo & ";")
+        agente.delete("DELETE FROM ARTICULOS WHERE idArticulo=" & articulo.id_articulo & ";")
+        agente.delete("DELETE FROM AUTOR WHERE Articulo=" & articulo.id_articulo & ";")
         readAll()
 
     End Sub
